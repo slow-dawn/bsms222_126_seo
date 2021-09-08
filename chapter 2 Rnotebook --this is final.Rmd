@@ -1550,7 +1550,7 @@ data(murders)
 
 1. Compute the per 100,000 murder rate for each state and store it in an object called murder_rate. Then use logical operators to create a logical vector named low that tells us which entries of murder_rate are lower than 1.
 ```{r}
-murder_rate <- murders$total / murders$state * 100000
+murders_rate <- murders$total / murders$state * 100000
 low <- murder_rate < 1
 murders$state[low]
 ```
@@ -1724,7 +1724,7 @@ plot(x,y)
 2. Create a histogram of the state populations.
 
 ```{r}
-x <- with(population_in_millions,  total_gun_murders / state)
+x <- with(population_in_millions, total_gun_murders / state)
 hist(x)
 ```
 
