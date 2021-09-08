@@ -395,6 +395,12 @@ avg(1:10)</code></pre>
 <p>The functions you define can have multiple arguments as well as default values. For example, we can define a function that computes either the arithmetic or geometric average depending on a user defined variable like this:</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXZnIDwtIGZ1bmN0aW9uKHgsIGFyaXRobWV0aWMgPSBUUlVFKXtcbiAgbiA8LSBsZW5ndGgoeClcbiAgaWZlbHNlKGFyaXRobWV0aWMsIHN1bSh4KS9uLCBwcm9kKHgpXigxL24pKVxufVxuYGBgIn0= -->
+<pre class="r"><code>avg &lt;- function(x, arithmetic = TRUE){
+  n &lt;- length(x)
+  ifelse(arithmetic, sum(x)/n, prod(x)^(1/n))
+}</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>We will learn more about how to create functions through experience as we face more complex tasks.</p>
@@ -404,23 +410,41 @@ avg(1:10)</code></pre>
 <p>Once you start becoming more of an R expert user, you will likely need to load several add-on packages for some of your analysis. Once you start doing this, it is likely that two packages use the same name for two different functions. And often these functions do completely different things. In fact, you have already encountered this because both <strong>dplyr</strong> and the R-base <strong>stats</strong> package define a filter function. There are five other examples in dplyr. We know this because when we first load <strong>dplyr</strong> we see the following message:</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOnN0YXRz4oCZOlxuXG4gICAgZmlsdGVyLCBsYWdcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOmJhc2XigJk6XG5cbiAgICBpbnRlcnNlY3QsIHNldGRpZmYsIHNldGVxdWFsLCB1bmlvblxuYGBgIn0= -->
+<pre class="r"><code>The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>So what does R do when we type filter? Does it use the dplyr function or the stats function? From our previous work we know it uses the dplyr one. But what if we want to use the stats version?</p>
 <p>These functions live in different <em>namespaces</em>. R will follow a certain order when searching for a function in these <em>namespaces</em>. You can see the order by typing:</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2VhcmNoKClcbmBgYCJ9 -->
+<pre class="r"><code>search()</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>The first entry in this list is the global environment which includes all the objects you define.</p>
 <p>So what if we want to use the stats filter instead of the dplyr filter but dplyr appears first in the search list? You can force the use of a specific namespace by using double colons (::) like this:</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RhdHM6OmZpbHRlclxuYGBgIn0= -->
+<pre class="r"><code>stats::filter</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>If we want to be absolutely sure that we use the <strong>dplyr</strong> filter, we can use</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZHBseXI6OmZpbHRlclxuYGBgIn0= -->
+<pre class="r"><code>dplyr::filter</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Also note that if we want to use a function in a package without loading the entire package, we can use the double colon as well.</p>
@@ -429,6 +453,12 @@ avg(1:10)</code></pre>
 <p>The formula for the sum of the series <span class="math inline">\(1+2+...+n\)</span> is <span class="math inline">\(n(n+1)/2\)</span>. What if we weren’t sure that was the right function? How could we check? Using what we learned about functions we can create one that computes the <span class="math inline">\(S_n\)</span>.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29tcHV0ZV9zX24gPC0gZnVuY3Rpb24oeCl7XG4gIHggPC0gMTpuXG4gIHN1bSh4KVxufVxuYGBgIn0= -->
+<pre class="r"><code>compute_s_n &lt;- function(x){
+  x &lt;- 1:n
+  sum(x)
+}</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>How can we compute <span class="math inline">\(S_n\)</span> for various values of <span class="math inline">\(n\)</span>, say <span class="math inline">\(n=1,...,25\)</span>? Do we write 25 lines of code calling compute_s_n? No, that is what for-loops are for in programming. In this case, we are performing exactly the same task over and over, and the only thing that is changing is the value of <span class="math inline">\(n\)</span>. For-loops let us define the range that our variable takes (in our example <span class="math inline">\(n=1,...,10\)</span>), then change the value and evaluate expression as you <em>loop</em>.</p>
@@ -505,6 +535,10 @@ x*y</code></pre>
 <p>To make this calculation, there is no need for for-loops. However, not all functions work this way. For instance, the function we just wrote, compute_s_n, does not work element-wise since it is expecting a scalar. This piece of code does not run the function on each entry of n:</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubiA8LSAxOjI1XG5jb21wdXRlX3NfbihuKVxuYGBgIn0= -->
+<pre class="r"><code>n &lt;- 1:25
+compute_s_n(n)</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p><em>Functionals</em> are functions that help us apply the same function to each entry in a vector, matrix, data frame, or list. Here we cover the functional that operates on numeric, logical, and character vectors: sapply.</p>
@@ -612,6 +646,13 @@ sum_n(5000)</code></pre>
 </ol>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueCA8LSAzXG5teV9mdW5jIDwtIGZ1bmN0aW9uKHkpe1xuICB4IDwtIDVcbiAgeSs1XG59XG5gYGAifQ== -->
+<pre class="r"><code>x &lt;- 3
+my_func &lt;- function(y){
+  x &lt;- 5
+  y+5
+}</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
