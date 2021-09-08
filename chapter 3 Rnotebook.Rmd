@@ -273,20 +273,16 @@ if(all(x>0)){
 
 
 2. Which of the following expressions is always FALSE when at least one entry of a logical vector x is TRUE?
-
 ```{r}
 #a. all(x)
 ```
 
 
+
 3. The function nchar tells you how many characters long a character vector is. Write a line of code that assigns to the object new_names the state abbreviation when the state name is longer than 8 characters.
 
 ```{r}
-new_names <- ifelse(nchar(murders$state) > 8, c(murders$abb), NA)
-```
-
-```{r}
-new_names
+ifelse(nchar(murders$state) > 8, c(murders$abb), NA)
 ```
 
 4. Create a function sum_n that for any given value, say  
@@ -300,7 +296,7 @@ sum_n(5000)
 5. Create a function altman_plot that takes two arguments, x and y, and plots the difference against the sum.
 
 ```{r}
-altman_plot <- function(x){x+y}
+altman_plot <- function(x){}
 ```
 
 
@@ -322,7 +318,7 @@ my_func(3)
 7. Write a function compute_s_n that for any given $n$ computes the sum $S_n=1^2+2^2+3^2+,,,+n^2$. Report the value of the sum when n=10.
 
 ```{r}
-compute_s_n <- function(x){
+compute_s_n <- function(n){
   x <- 1:n
   sum(x^2)
 }
@@ -332,7 +328,7 @@ compute_s_n <- function(x){
 compute_s_n(10)
 ```
 
-
+.
 8. Define an empty numerical vector s_n of size 25 using s_n <- vector("numeric", 25) and store in the results of $S_1,S_2,,,,S_25$ using a for-loop.
 
 ```{r}
