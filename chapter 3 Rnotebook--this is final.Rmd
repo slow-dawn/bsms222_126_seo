@@ -280,8 +280,9 @@ if(all(x>0)){
 2. Which of the following expressions is always FALSE when at least one entry of a logical vector x is TRUE?
 
 ```{r}
-#a. all(x)
+# a. all(x)
 ```
+
 
 
 3. The function nchar tells you how many characters long a character vector is. Write a line of code that assigns to the object new_names the state abbreviation when the state name is longer than 8 characters.
