@@ -262,6 +262,8 @@ Other functionals are apply, lapply, tapply, mapply, vapply, and replicate. We m
 
 
 
+
+
 # 3.6 Exercise
 
 1. What will this conditional expression return?
