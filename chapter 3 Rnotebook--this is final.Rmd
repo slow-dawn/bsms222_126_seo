@@ -179,7 +179,8 @@ Also note that if we want to use a function in a package without loading the ent
 For more on this more advanced topic we recommend the R packages book16.
 
 
-#3.4 For-loops
+
+# 3.4 For-loops
 
 The formula for the sum of the series $1+2+...+n$ is $n(n+1)/2$. What if we weren’t sure that was the right function? How could we check? Using what we learned about functions we can create one that computes the $S_n$.
 ```{r}
@@ -370,6 +371,3 @@ plot(n, s_n)
 identical(s_n, n*(n+1)*(2*n+1)/6)
 ```
 
-
-
-.
