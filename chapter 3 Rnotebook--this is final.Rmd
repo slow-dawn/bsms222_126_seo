@@ -61,6 +61,8 @@ result <- ifelse(a > 0, 1/a, NA)
 
 This table helps us see what happened:
 
+
+
 Here is an example of how this function can be readily used to replace all the missing values in a vector with zeros:
 ```{r}
 data(na_example)
@@ -368,3 +370,6 @@ plot(n, s_n)
 identical(s_n, n*(n+1)*(2*n+1)/6)
 ```
 
+
+
+.
