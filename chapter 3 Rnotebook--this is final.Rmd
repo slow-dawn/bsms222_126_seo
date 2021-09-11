@@ -264,6 +264,7 @@ Other functionals are apply, lapply, tapply, mapply, vapply, and replicate. We m
 # 3.6 Exercise
 
 1. What will this conditional expression return?
+
 ```{r}
 x <- c(1,2,-3,4)
 
@@ -275,9 +276,9 @@ if(all(x>0)){
 ```
 
 
+
 2. Which of the following expressions is always FALSE when at least one entry of a logical vector x is TRUE?
 
-a. all(x)
 ```{r}
 #a. all(x)
 ```
@@ -320,6 +321,8 @@ my_func(3)
 ```
 
 
+
+
 7. Write a function compute_s_n that for any given $n$ computes the sum $S_n=1^2+2^2+3^2+,,,+n^2$. Report the value of the sum when n=10.
 
 ```{r}
@@ -333,7 +336,9 @@ compute_s_n <- function(n){
 compute_s_n(10)
 ```
 
-.
+
+
+
 8. Define an empty numerical vector s_n of size 25 using s_n <- vector("numeric", 25) and store in the results of $S_1,S_2,,,,S_25$ using a for-loop.
 
 ```{r}
@@ -344,11 +349,16 @@ for (n in 1:m) {
 }
 ```
 
+
+
 9. Repeat exercise 8, but this time use sapply.
+
 ```{r}
 n <- 1:25
 sapply(n, compute_s_n)
 ```
+
+
 
 10. Repeat exercise 8, but this time use map_dbl.
 
@@ -358,6 +368,7 @@ map_dbl(n, compute_s_n)
 ```
 
 
+
 11. Plot  $S_n$ versus  $n$. Use points defined by $n=1,...,25$
 
 ```{r}
@@ -365,11 +376,10 @@ n <- 1:25
 plot(n, s_n)
 ```
 
+
 12. Confirm that the formula for this sum is $S_n=n(n+1)(2n+1)/6$.
 
 ```{r}
 identical(s_n, n*(n+1)*(2*n+1)/6)
 ```
 
-
-.
