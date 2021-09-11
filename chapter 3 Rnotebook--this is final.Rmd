@@ -372,6 +372,7 @@ map_dbl(n, compute_s_n)
 
 
 
+
 11. Plot  $S_n$ versus  $n$. Use points defined by $n=1,...,25$
 
 ```{r}
