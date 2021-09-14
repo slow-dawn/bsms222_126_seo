@@ -16,7 +16,6 @@ library(dplyr)
 library(devtools)
 library(dslabs)
 library(pander)
-
 ```
 
 ```{r}
