@@ -139,8 +139,8 @@ data("murders")
 murders <- mutate(murders, rate = total / population * 100000)
 ```
 ```{r}
-function(pander)
-  pander(murders)
+library(pander)
+pander(murders)
 ```
 
 Notice that here we used total and population inside the function, which are objects that are not defined in our workspace. But why don’t we get an error?
