@@ -13,6 +13,7 @@ We can load all the tidyverse packages at once by installing and loading the tid
 
 ```{r}
 library(tidyverse)
+library(pander)
 pander(murders)
 ```
 
@@ -138,10 +139,6 @@ We want all the necessary information for our analysis to be included in the dat
 library(dslabs)
 data("murders")
 murders <- mutate(murders, rate = total / population * 100000)
-```
-```{r}
-library(pander)
-pander(murders)
 ```
 
 Notice that here we used total and population inside the function, which are objects that are not defined in our workspace. But why don’t we get an error?
