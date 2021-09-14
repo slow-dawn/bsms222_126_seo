@@ -378,6 +378,7 @@ mutate(murders, rate =  total / population * 100000,
 ```
 
 
+
 2. Reset murders to the original table by using data(murders). Use a pipe to create a new data frame called my_states that considers only states in the Northeast or West which have a murder rate lower than 1, and contains only the state, rate and rank columns. The pipe should also have four components separated by three %>%. The code should look something like this:
 
 
