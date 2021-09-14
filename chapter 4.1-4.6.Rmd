@@ -2,8 +2,7 @@
 title: "Chapter 4 The tidyverse"
 output:
   html_notebook: default
-  html_document:
-    df_print: paged
+  html_document: default
   pdf_document: default
 ---
 
@@ -139,6 +138,10 @@ library(dslabs)
 data("murders")
 murders <- mutate(murders, rate = total / population * 100000)
 ```
+```{r}
+function(pander)
+  pander(murders)
+```
 
 Notice that here we used total and population inside the function, which are objects that are not defined in our workspace. But why don’t we get an error?
 
@@ -195,6 +198,7 @@ Use the function mutate to add a murders column named rate with the per 100,000 
 ```{r}
 murders <- mutate(murders, rate = murder_rate )
 rate <- murder_rate
+murder_rate
 ```
 
 ```{r}
@@ -388,6 +392,7 @@ my_states <- murders %>%
   filter(murder_rate < 1 & region %in% c("Northeast", "West")) %>%
   select(state, rate, rank)
 ```
+
 ```{r}
 my_states
 ```
