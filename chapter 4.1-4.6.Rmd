@@ -9,7 +9,6 @@ output:
 Up to now we have been manipulating vectors by reordering and subsetting them through indexing. However, once we start more advanced analyses, the preferred unit for data storage is not the vector but the data frame. In this chapter we learn to work directly with data frames, which greatly facilitate the organization of information. We will be using data frames for the majority of this book. We will focus on a specific data format referred to as tidy and on specific collection of packages that are particularly helpful for working with tidy data referred to as the tidyverse.
 
 We can load all the tidyverse packages at once by installing and loading the tidyverse package:
- 
 
 ```{r}
 library(tidyverse)
