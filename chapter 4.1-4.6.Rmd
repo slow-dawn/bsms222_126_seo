@@ -12,6 +12,9 @@ We can load all the tidyverse packages at once by installing and loading the tid
 
 ```{r}
 library(tidyverse)
+library(dplyr)
+library(devtools)
+library(dslabs)
 library(pander)
 pander(murders)
 ```
@@ -393,4 +396,3 @@ my_states <- murders %>%
 ```{r}
 my_states
 ```
-.
