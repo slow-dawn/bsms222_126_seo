@@ -16,6 +16,7 @@ library(dplyr)
 library(devtools)
 library(dslabs)
 library(pander)
+murders <- data("murders")
 pander(murders)
 ```
 
