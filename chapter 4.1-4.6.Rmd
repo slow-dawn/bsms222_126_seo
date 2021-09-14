@@ -1,6 +1,10 @@
 ---
 title: "Chapter 4 The tidyverse"
-output: html_notebook
+output:
+  html_notebook: default
+  html_document:
+    df_print: paged
+  pdf_document: default
 ---
 
 Up to now we have been manipulating vectors by reordering and subsetting them through indexing. However, once we start more advanced analyses, the preferred unit for data storage is not the vector but the data frame. In this chapter we learn to work directly with data frames, which greatly facilitate the organization of information. We will be using data frames for the majority of this book. We will focus on a specific data format referred to as tidy and on specific collection of packages that are particularly helpful for working with tidy data referred to as the tidyverse.
@@ -73,7 +77,7 @@ ChickWeight
 ```
 
 ```{r}
-# b. 
+# b 
 ```
 
 
@@ -84,7 +88,7 @@ BOD
 ```
 
 ```{r}
-# c.
+#  c.
 ```
 
 
@@ -97,15 +101,20 @@ BOD
 ```{r}
 BJsales
 ```
+
 ```{r}
 EuStockMarkets
 ```
+
+
 ```{r}
 DNase
 ```
+
 ```{r}
 Formaldehyde
 ```
+
 
 ```{r}
 Orange
@@ -249,6 +258,7 @@ Create a new data frame called no_south that removes states from the South regio
 
 ```{r}
 no_south <- filter(murders, region != "South")
+no_south
 ```
 
 ```{r}
@@ -265,6 +275,7 @@ Create a new data frame called murders_nw with only the states from the Northeas
 
 ```{r}
 murders_nw <- filter(murders, region %in% c("Northeast", "West"))
+murders_nw
 ```
 
 ```{r}
@@ -335,7 +346,7 @@ Note that the pipe works well with functions where the first argument is the inp
 
 
 
-#4.6 Exercise
+# 4.6 Exercise
 1. The pipe %>% can be used to perform operations sequentially without having to define intermediate objects. Start by redefining murder to include rate and rank.
 ```{r}
 murders <- mutate(murders, rate =  total / population * 100000, 
@@ -369,12 +380,15 @@ mutate(murders, rate =  total / population * 100000,
 
 2. Reset murders to the original table by using data(murders). Use a pipe to create a new data frame called my_states that considers only states in the Northeast or West which have a murder rate lower than 1, and contains only the state, rate and rank columns. The pipe should also have four components separated by three %>%. The code should look something like this:
 
+
 ```{r}
-my_state <- data(murders)
-  my_state %>%
-  mutate(murders, rate =  total / population * 100000, 
-       rank = rank(-rate)) %>%
-  select(state, rate, rank) %>%
-  filter(rate < 1 & region %in% c("Northeast", "West"))
+murders <- data("murders")
+rate <- data.frame(murder_rate)
+rank <- data.frame(rank(-rate))
+my_states <- murders %>%
+  mutate(rate, rank) %>%
+  filter(murder_rate < 1 & data(region) %in% c("Northeast", "West")) %>%
+  select(state, rate, rank)
+ 
 ```
 
