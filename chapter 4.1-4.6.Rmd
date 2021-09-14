@@ -385,10 +385,10 @@ mutate(murders, rate =  total / population * 100000,
 murders <- data("murders")
 rate <- data.frame(murder_rate)
 rank <- data.frame(rank(-rate))
+
 my_states <- murders %>%
   mutate(rate, rank) %>%
   filter(murder_rate < 1 & data(region) %in% c("Northeast", "West")) %>%
   select(state, rate, rank)
- 
 ```
 
