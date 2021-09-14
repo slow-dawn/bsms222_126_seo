@@ -1051,6 +1051,13 @@ murders &lt;- mutate(murders, rate = total / population * 100000)</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZChtdXJkZXJzKVxuYGBgIn0= -->
 <pre class="r"><code>head(murders)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6Niwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbNiB4IDZdIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQmwxVFRXc1RRUmllSkR0YmR5R2xJTjU3S2VxaGtkSmVna0puMmJhWGlpM0pvYUVuSjhta1diS1pDYk1UTFI3OG9EK2hoNHA0RWV5aDBIclVIK0JCRVgrQkJ4SEVmOUJ6Nm54dXU3c3d2TS96enN6N3pQUE9iR3Vqc3hwMlFnQkFEWGlWQ3FoQkNRR01kNXRyVFFDOHFpUVY0SUZBeFVPNTZMWUV2aHdMT3BxSnVTakZYVHpHbHZxU1ppT2NUL0xrQmFPTzNvcjRDTk1NWjVhSE1VNlRBZU0weVZmRUxHVWM5MWxKcFJvOXp0RjJqdlp6MUhJb2puSzBJMDljdHlkV1ZqdzdidUNDUlQ4bHowaWFXV1hQWm9NbmpJc2h3Wm13Q2RobVV6RzBwSzVuRjJOQ0JjZXBUWHA3Uks0dUZvYzkyUmRYTzFjYzRKNWdYS0taSFBPNmZhMkhuOVVsUkV2bm4zVHNkTmVRaWx2cmR6Vi84L1hkb29ydEIyMWdQcjBQUGYyakNWbzFTVFMyY1ErWmVQelJ4RjBFQ3Z2OHQ2T1hkejc4UkhEdzdkLzdIeHVvSG15ZW5HNmVvZURvOStXdlYvZFFPSHZVSE4vL3ZuNTU4WGRuLzh0aDJSYkZZK0pzdWN1Q21jQ0NXRkxEM2E2enk4bEJ3cWk3L0FtYlRGTXNyak5RTUhIZFJLNXFGTlVDenA0M25LSzYydXByWThVM0MydFhwUWFIZlN4d1k4RGxGdFBrUXJrNU5sSHFzbGhWdld4WTJsemhwY1RDbENyeC9uSnZPS1dqNVpXbVV0RHpadFJ0OUl0WWFYcnVaTkQxZ3RDRGhMb21RZmtQRWVkOFhyclVKaHNUbmxEMzdFS1p6Um8zT3hUMldPb3k1Z1hOL2dPQ01sWWkwUU1BQUE9PSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["abb"],"name":[2],"type":["chr"],"align":["left"]},{"label":["region"],"name":[3],"type":["fctr"],"align":["left"]},{"label":["population"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["total"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["rate"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"Alabama","2":"AL","3":"South","4":"4779736","5":"135","6":"2.824424","_rn_":"1"},{"1":"Alaska","2":"AK","3":"West","4":"710231","5":"19","6":"2.675186","_rn_":"2"},{"1":"Arizona","2":"AZ","3":"West","4":"6392017","5":"232","6":"3.629527","_rn_":"3"},{"1":"Arkansas","2":"AR","3":"South","4":"2915918","5":"93","6":"3.189390","_rn_":"4"},{"1":"California","2":"CA","3":"West","4":"37253956","5":"1257","6":"3.374138","_rn_":"5"},{"1":"Colorado","2":"CO","3":"West","4":"5029196","5":"65","6":"1.292453","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10],"total":[6]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Although we have overwritten the original murders object, this does not change the object that loaded with data(murders). If we load the murders data again, the original will overwrite our mutated version.</p>
@@ -1063,6 +1070,13 @@ murders &lt;- mutate(murders, rate = total / population * 100000)</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZmlsdGVyKG11cmRlcnMsIHJhdGUgPD0gMC43MSlcbmBgYCJ9 -->
 <pre class="r"><code>filter(murders, rate &lt;= 0.71)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NSwibmNvbCI6Niwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbNSB4IDZdIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQmwxVFFXdmJNQlNXRTlzaFpzMENIV1dGSFFMcnRXRzAyYUd3NFlabTFMbUUwWTJ1aDEyVVZHMU1IY25JY3IxRER6ME44aGNHMjM3QTJsTVBQZTgvRExaRG9SMkZsZjZKYkpLczV5VVJpUGU5NTZmM3Z1OUozdW5zclh0N0hrS29qR3pMUW1WSFF1UnN2ZDVvYlNCa2w2UmpJUnRWbGYwZ2t4WWxjT1d1cXl6endRMXdoc1BRZUhhWFpkamdoUjdKR2dFZXhja3c1TVFFSC9RWUY4TkdCeDh4QVltVlhjSkhqSXE1eXFXZ0M2amJCdFFMQ3RRQnRQdFdjbHZRSnlVRHJVWVJMK3lNRURjaXh5UktUQy9iUkt1YUZzR0pNQUhuRFV2RnNGQ2lTVzhSS2ppT1FPbzdJck5uaXp1RENDZFF1K2g0Z0FlQ2NZa21jdGRVV3J2MS9WeU51cjM5OHY1VTJkYlNzZlpYUG43Ujl1bmpUeWhmT24velNlNXNQamYya2JGMVkxR3hkTDUvazQyL2psK2MrSDhlcm9UWHI5Nzd2M29YbjRPck0vKzJjbmU3ZkRueGY0aHZ2OTJmNlR4OWlrY0U2THNRVEFRV2NIMWwzTytETEU0T1EwYU41OFVzVGlNcy9rY2NJVys0R0JaWE5XYTdWVG5MbXRCUlhWL3BOSmZnNUlubHYzT0Q5UGF4d00wRExvL2t3NXdwVjJHeDZpNkxsUmJOVzVnK2JQRzVRRDJscXZuKzZtQ1kwcVBWdFdlcWczazR5REN5VENIQWJ0N1RCbWJGVDBEb1lVaGhTRTZFK3dTVTE2UktMYklaODVEQzgvSmtOR2xPVDhnYnNBZ2krVXVaL0FON1AxVkdud01BQUE9PSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["abb"],"name":[2],"type":["chr"],"align":["left"]},{"label":["region"],"name":[3],"type":["fctr"],"align":["left"]},{"label":["population"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["total"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["rate"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"Hawaii","2":"HI","3":"West","4":"1360301","5":"7","6":"0.5145920"},{"1":"Iowa","2":"IA","3":"North Central","4":"3046355","5":"21","6":"0.6893484"},{"1":"New Hampshire","2":"NH","3":"Northeast","4":"1316470","5":"5","6":"0.3798036"},{"1":"North Dakota","2":"ND","3":"North Central","4":"672591","5":"4","6":"0.5947151"},{"1":"Vermont","2":"VT","3":"Northeast","4":"625741","5":"2","6":"0.3196211"}],"options":{"columns":{"min":{},"max":[10],"total":[6]},"rows":{"min":[10],"max":[10],"total":[5]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -1075,6 +1089,13 @@ murders &lt;- mutate(murders, rate = total / population * 100000)</code></pre>
 <pre class="r"><code>new_table &lt;- select(murders, state, region, rate)
 filter(new_table, rate &lt;= 0.71)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NSwibmNvbCI6Mywic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbNSB4IDNdIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQmwxU3UwN0RNQlIxbWtmVmlCYWtUbXdkV0J1SngxSUpLVU9MVkpZS2dRUWRXRXpxTmxGVHUzSWN3c0RBMm85QWZBQnNEUHdJRWd4SWdDckJYeFNjeExlUVJvcDhmWHg4enJHdmp6djlYYnR2STRSMFpHZ2EwazFaSXJOOTFOcHJJV1NVNUVSREJxcWs0NVVrMVRNbVFoc3BTeTFZWFp6Z0lGQXo0NUFsV05YVkhra2FYVHlaUm43QWlRTFhlb3dMdjlIQll5YUFXRDRsZk1Lb2tPTFZURm5xS0NmdGJ5ekVzVUp5U2NKSVpURVVXc25FQ1k2RUFzd1RGZ3QvbVNlemJoTXFPQTRoOEJtUjdLSzQ2WVU0QXUybDR4QjdnbkZaTGVSZlMybnVSeks3bSsxZnUxL3JXOEg3d2JuNzJudTg3YjQ5dVBQeTkzenphZUUraS90UDZ5VmVsYWQ0UWtCZUJ6QVNXTUFsV1p5TUFrWWhJazlYaWhvVnpoSUhkTkpMSzkyZzdETnpvdjZ6RXQ4ZVlJR2RJWmRiOGlNVTVNcHNLcVNoRkN2VlZRZitiOWI0Q3JBUjA5UjgwUFQ4bUk2Yk85dXBnMm9YVW9rMEpRUzFubnNha0d6NWdBZ2RCUlNPYm9iNGdrQnphdktVMlNHZEtROG9OTldXYU9RSStYNkFaM3NzQkNUdnorSVhqVHNnYWRzQ0FBQT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["region"],"name":[2],"type":["fctr"],"align":["left"]},{"label":["rate"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"Hawaii","2":"West","3":"0.5145920"},{"1":"Iowa","2":"North Central","3":"0.6893484"},{"1":"New Hampshire","2":"Northeast","3":"0.3798036"},{"1":"North Dakota","2":"North Central","3":"0.5947151"},{"1":"Vermont","2":"Northeast","3":"0.3196211"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[5]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>In the call to select, the first argument murders is an object, but state, region, and rate are variable names.</p>
@@ -1111,6 +1132,16 @@ data(murders)</code></pre>
 rate &lt;- murder_rate
 murder_rate</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSAgMi44MjQ0MjM4ICAyLjY3NTE4NjAgIDMuNjI5NTI3MyAgMy4xODkzOTAxICAzLjM3NDEzODMgIDEuMjkyNDUzMSAgMi43MTM5NzIyXG4gWzhdICA0LjIzMTkzNjkgMTYuNDUyNzUzMiAgMy4zOTgwNjg4ICAzLjc5MDMyMjYgIDAuNTE0NTkyMCAgMC43NjU1MTAyICAyLjgzNjk2MDhcblsxNV0gIDIuMTkwMDczMCAgMC42ODkzNDg0ICAyLjIwODExMDYgIDIuNjczMjAxMCAgNy43NDI1ODEwICAwLjgyODA4ODEgIDUuMDc0ODY1NVxuWzIyXSAgMS44MDIxNzkxICA0LjE3ODYyMjUgIDAuOTk5MjYwMCAgNC4wNDQwODQ2ICA1LjM1OTg5MTcgIDEuMjEyODM3OSAgMS43NTIxMzcyXG5bMjldICAzLjExMDQ3NjMgIDAuMzc5ODAzNiAgMi43OTgwMzE5ICAzLjI1MzcyMzkgIDIuNjY3OTU5OSAgMi45OTkzMjM3ICAwLjU5NDcxNTFcblszNl0gIDIuNjg3MTIyNSAgMi45NTg5MzQwICAwLjkzOTY4NDMgIDMuNTk3NzUxMyAgMS41MjAwOTMzICA0LjQ3NTMyMzUgIDAuOTgyNTgzN1xuWzQzXSAgMy40NTA5MzU3ICAzLjIwMTM2MDMgIDAuNzk1OTgxMCAgMC4zMTk2MjExICAzLjEyNDYwMDEgIDEuMzgyOTk0MiAgMS40NTcxMDEzXG5bNTBdICAxLjcwNTY0ODcgIDAuODg3MTEzMVxuIn0= -->
+<pre><code> [1]  2.8244238  2.6751860  3.6295273  3.1893901  3.3741383  1.2924531  2.7139722
+ [8]  4.2319369 16.4527532  3.3980688  3.7903226  0.5145920  0.7655102  2.8369608
+[15]  2.1900730  0.6893484  2.2081106  2.6732010  7.7425810  0.8280881  5.0748655
+[22]  1.8021791  4.1786225  0.9992600  4.0440846  5.3598917  1.2128379  1.7521372
+[29]  3.1104763  0.3798036  2.7980319  3.2537239  2.6679599  2.9993237  0.5947151
+[36]  2.6871225  2.9589340  0.9396843  3.5977513  1.5200933  4.4753235  0.9825837
+[43]  3.4509357  3.2013603  0.7959810  0.3196211  3.1246001  1.3829942  1.4571013
+[50]  1.7056487  0.8871131</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
@@ -1118,6 +1149,13 @@ murder_rate</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZChtdXJkZXJzKVxuYGBgIn0= -->
 <pre class="r"><code>head(murders)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6Nywic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbNiB4IDddIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQmwxVHoyc1RRUlNlSlB2RExDUVVxb0tIU2kraUhocC90QXBCSmJPbTlhS1lraUFOUllpVFpOTXNtWjBKc3hNdEh0VGlTUStDZUZERWd3VTlDT3BCVWNHREZ3K0s5T0RaZ3doUyt3LzBIRHU3TzdOTmR1SHh2dSs5ZWZObXZubGJuYS9QV25VTEFKQUJXaW9GTXJxQVFDOHZGdWVLQUdocFFWSkFBOW5BcjRwRmt3S1l3aWFFR1RKaDJoZzFrWWNrTlFUMWV5aE9NdmNtSllydXNWa1BFUi81a2x0bGhOME9aY1NOVjVRcHBneTFhYUpMMnI0VW80c3hXbzVSVmFHeUhhT0tPSEV1M0VNd1lacTBFVHgyUlFNNzF4M3N5ODZhakdZdlU4YTdEdks1RE9nMU91QmRTWEpoZHJyc0VNNFFsa0Z0eVJHcnh6ZlhXMElYdFhmY3NZTmFuREtCaHNMeW9YelZNeCtEUjdBUHZYNGIrbnB6RGdiK1F1bHd5TmUrUHAwT2ZPMVlEVVJmV0Fldi9Ra0puSTJDMEpOK0NVYiswWXZJTDBJd1ZqZDUwSjhxNUkrWC9uMCtmZlY5NHh3ODhCQnYzZHNhUUxPMjhYTjQvd004LzN4dC9VcmxDOXc3dGZtZy9lNUVYR2M4NmQzYXQ3NEI5YzYzeldjLzVtRXV1L0Q0NWNJcm1MMzdlL3ZYN1NQUUdwNHRla2UvbDdiZi9LMHNmMXBOeWtHUTV5ZzVUQlgwT2VLT0pCblViQ3FabUxQaVVxS0dway83QTR6NGJrVG5sTWZpNzk5Tk4xelM4RnlNQlZRVHA3R2d3L2hac296ZUtLanpCQU9UdmhNSlpFUUxNLzhUejJhMUVVZUZEaE1sMGRPTmJXZlNQZzg3Z25Ud3YraUo0aFJMQkNZR0pHamVubWwxQjZRM2MvSlUwQ0hNUjVhVDNoakJadFJUVXlmVGxWSU9XWEdKa2xBWGY2YWpkTW1MVzRhWExQU1pTOVF3V3lMcUYwYjFzMW9VcTBnMGw4TWRUSmF3NFNjRUFBQT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["abb"],"name":[2],"type":["chr"],"align":["left"]},{"label":["region"],"name":[3],"type":["fctr"],"align":["left"]},{"label":["population"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["total"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["population_in_millions"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["rate"],"name":[7],"type":["dbl"],"align":["right"]}],"data":[{"1":"Alabama","2":"AL","3":"South","4":"4779736","5":"135","6":"4.779736","7":"2.824424","_rn_":"1"},{"1":"Alaska","2":"AK","3":"West","4":"710231","5":"19","6":"0.710231","7":"2.675186","_rn_":"2"},{"1":"Arizona","2":"AZ","3":"West","4":"6392017","5":"232","6":"6.392017","7":"3.629527","_rn_":"3"},{"1":"Arkansas","2":"AR","3":"South","4":"2915918","5":"93","6":"2.915918","7":"3.189390","_rn_":"4"},{"1":"California","2":"CA","3":"West","4":"37253956","5":"1257","6":"37.253956","7":"3.374138","_rn_":"5"},{"1":"Colorado","2":"CO","3":"West","4":"5029196","5":"65","6":"5.029196","7":"1.292453","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10],"total":[7]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ol start="2" style="list-style-type: decimal">
@@ -1129,6 +1167,10 @@ murder_rate</code></pre>
 <pre class="r"><code>x &lt;- rate
 rank(-x)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSAyMyAyNyAxMCAxNyAxNCAzOCAyNSAgNiAgMSAxMyAgOSA0OSA0NiAyMiAzMSA0NyAzMCAyOCAgMiA0NCAgNCAzMiAgNyA0MCAgOCAgM1xuWzI3XSAzOSAzMyAxOSA1MCAyNCAxNSAyOSAyMCA0OCAyNiAyMSA0MiAxMSAzNSAgNSA0MSAxMiAxNiA0NSA1MSAxOCAzNyAzNiAzNCA0M1xuIn0= -->
+<pre><code> [1] 23 27 10 17 14 38 25  6  1 13  9 49 46 22 31 47 30 28  2 44  4 32  7 40  8  3
+[27] 39 33 19 50 24 15 29 20 48 26 21 42 11 35  5 41 12 16 45 51 18 37 36 34 43</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
@@ -1143,6 +1185,13 @@ rank(-x)</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZChtdXJkZXJzKVxuYGBgIn0= -->
 <pre class="r"><code>head(murders)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6OCwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbNiB4IDhdIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQmwxVHpXc1RRUlNmSkx1YlpDR2hVQlU4VkhwUWJNR3MxaFkxVk1uRWJiMG9waVJJUXhIaUpOazBTell6WVhhaXdZTmFQT2xCRUErS2VMQ2dCMEU5S0NwNDhPSkJrUjQ4ZXhCQjJ2NERQVWRuZDJjMkh3dVAzKys5TjIvZXg3NHBMcFhuOWJJT0FJZ0JKUklCTVpWVG9Kb3IyWVVzQUVxVUt4R2dnS1NIUFg1b2twTUVsd2t1bW5ERTh3NnFvallTcXNaVnQ0VkNKN1Z2RWl6VlJKNjJFSGFSSzNUZFJJN2RJQlRiNFFtVE9JU2lPaG5MRXMxZkN0bkZrSzJGckNpWm1ROVpnVmVjOHUvZ0doZEZ5QkFmYVZGenJPdVc0NHJNaXJBbUx4UEttaFp5bVRDb0pkSmxUYUdrZk8rMGFXRkdrU09NeXFyRlQ0OWVydGI0WE9UZFljWUdxakZDT2V0elNmdmpLeTUrOUg1Qy9zanJ0ejZXcXd2UXd3dTVvNzYrOGZYcHRJZWw0eVVRZkg0Y3ZQYkhWK0I4WUlSdGdhc3d3RWN2QWx5QllDUnU4cEE3WmFSUDVIWStuN3I2dm5JT0huem83TjdiN2NKNGFldG4vLzRIZVA3NXh1YVZ3aGU0YjJyN1FmM2RYQmluUFduZDJyKzVCZFhHdCsxblA1WmdLcm44K09YeUs1aTgrM3Z2MSswWnFQZlBadHV6MzNON2IvNFcxajcxd3JqVG9xNUZnWWNGemdrOEp0Q1VaWTZPRWFPMkpjZVlrRWFYSVdZSkpZYXFWVGxlYXEzYkJNdGw2NUJPMTBGc1lGRVpZZUZQT3pCd1YyeGNhZHVPdzZuY1ZJVU9NaVFvd3EyWlRHOTJyTFlrSlRjTVdaKzNlTkU3UVFkYWNERDJiK3ozNjNYRWtOR2dQQ1JZZ1pIcjRxVEQvQXBBMUh0MzZsaHdoSTRaSnJyWVMxN1AxSnBkM01xY1BPTmw4UDJCcEFScVF6d1I1RlJrWmFxY25JWFhiU3diVnZrTHQrU2MwcnhMdjBtalEyMHNINFhPcmE0eFBFKzlSaHhwQ2ZhNy94OEZiZXdmYndRQUFBPT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["abb"],"name":[2],"type":["chr"],"align":["left"]},{"label":["region"],"name":[3],"type":["fctr"],"align":["left"]},{"label":["population"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["total"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["population_in_millions"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["rate"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["rank(-x)"],"name":[8],"type":["dbl"],"align":["right"]}],"data":[{"1":"Alabama","2":"AL","3":"South","4":"4779736","5":"135","6":"4.779736","7":"2.824424","8":"23","_rn_":"1"},{"1":"Alaska","2":"AK","3":"West","4":"710231","5":"19","6":"0.710231","7":"2.675186","8":"27","_rn_":"2"},{"1":"Arizona","2":"AZ","3":"West","4":"6392017","5":"232","6":"6.392017","7":"3.629527","8":"10","_rn_":"3"},{"1":"Arkansas","2":"AR","3":"South","4":"2915918","5":"93","6":"2.915918","7":"3.189390","8":"17","_rn_":"4"},{"1":"California","2":"CA","3":"West","4":"37253956","5":"1257","6":"37.253956","7":"3.374138","8":"14","_rn_":"5"},{"1":"Colorado","2":"CO","3":"West","4":"5029196","5":"65","6":"5.029196","7":"1.292453","8":"38","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10],"total":[8]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>3.With dplyr, we can use select to show only certain columns. For example, with this code we would only show the states and population sizes:</p>
@@ -1151,6 +1200,13 @@ rank(-x)</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2VsZWN0KG11cmRlcnMsIHN0YXRlLCBwb3B1bGF0aW9uKSAlPiUgaGVhZCgpXG5gYGAifQ== -->
 <pre class="r"><code>select(murders, state, population) %&gt;% head()</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6Miwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbNiB4IDJdIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQmwxUndVNkRRQkJkS0ZCTDBxYUpQK0RGZUNvbTJndnhvQVRqMmJRWHJsT2d1b0h1a21XSnhwUCtodDlnUFBvRC9sZDFkdGx0RkpMTnpIc3piOThNdTdyTkxzTXNKSVNNaU9jNFpPUmpTdnowUGw3R2hIZ3VBb2Q0WktMaU16WWRZNkxJT1o3QUZNWkpEUnZZZ1lFQndyYUNRMUhRRjg0c1BFcEVCYXlGMXVBd2hacHV1V0QwMEpIeW1nc29PT1l6ZmQzcTZrc05sWngrZk9xWWJaWTNLdDVkbjJuODl2MStvdUw2ZkUzMDkyOXNuOEd1Yk0zSXJpVmJDYkswTXpTODZXcVFsTE9CZGlMNFUyVDFVNlYvN1IyQ29VbU9PMXNUUzRZRlNJaTJBdldJOWdQSm1EZktFVVd1K3FuK1FPeUlBVEh2bUpxa1dPU1BIYXNXRjdGeTBQWCtURTBNL3VSdTcrbittTHQ4KzBRbGU2RE03dS9qODVXMUFUTmNXVzhjTllJeWFWZEJ0bzBrbDJEN3dwelhsdEhMa2YwdndXUVVYRXdDQUFBPSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["population"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"Alabama","2":"4779736","_rn_":"1"},{"1":"Alaska","2":"710231","_rn_":"2"},{"1":"Arizona","2":"6392017","_rn_":"3"},{"1":"Arkansas","2":"2915918","_rn_":"4"},{"1":"California","2":"37253956","_rn_":"5"},{"1":"Colorado","2":"5029196","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Use select to show the state names and abbreviations in murders. Do not redefine murders, just show the results.</p>
@@ -1159,6 +1215,13 @@ rank(-x)</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2VsZWN0KG11cmRlcnMsIHN0YXRlLCBhYmIpICU+JSBoZWFkKClcbmBgYCJ9 -->
 <pre class="r"><code>select(murders, state, abb) %&gt;% head()</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6Miwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbNiB4IDJdIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQmwxUnkyckRNQkJjeTdIVEdGSUMvWTZZUW5ySjBiaTNGbHB5Q3IydEgybUZIU2xJQ2kwOTljdlRyaHhKRkJtRVprWTd1eHByOTdqZkZQc0NBRktZSlFta0dVSEk2dGZ0d3haZ3hvZ2tNSU9GM2IrbzZJNkFGVmUwY25jd3IwWnM4SWlPNWtUMWdPRlE4VzhwUEwycDFJQkNvM2E4cUhIa0I2a0VEeFcxSEtYQ1RrWlRXUFVjMEZOQWJ3SHRQS3FyZ0Y2aUNKbkFZNjlkWStaRmJkRDBqcVRZTkpGcG9lUm42WTFMYS95QjZjdmo3aTBGOTkyOVdIUm9zRHdvOGhPN1JKYTVQQmt1QlptWS9iTlpaRTVVSkt6T3d0NmtXN2NmWnpHc04vZDJ3blIrWFV1MzUvOHd1ODVrdjY1WDV0K3BGKzljK09BWnZXRS9PbkpMa2FmRTVVbHhZWHdVVW5WcHBFRmZWN1J5OU1vVURpNS9ZaHlUYVZFQ0FBQT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["abb"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"Alabama","2":"AL","_rn_":"1"},{"1":"Alaska","2":"AK","_rn_":"2"},{"1":"Arizona","2":"AZ","_rn_":"3"},{"1":"Arkansas","2":"AR","_rn_":"4"},{"1":"California","2":"CA","_rn_":"5"},{"1":"Colorado","2":"CO","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ol start="4" style="list-style-type: decimal">
@@ -1169,6 +1232,13 @@ rank(-x)</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZmlsdGVyKG11cmRlcnMsIHN0YXRlID09IFwiTmV3IFlvcmtcIilcbmBgYCJ9 -->
 <pre class="r"><code>filter(murders, state == &quot;New York&quot;)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MSwibmNvbCI6OCwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbMSB4IDhdIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQmwxU1FXdkNNQlIrMWNiVmdpSU1kaHQ0ZEFjTHcxMDhERGJjYVFjWjIwR0ZnYVkxYWpFbUpVMDMyV2wvWU5mOXFmMlYvUVBCTGExSnRTMkV2dTk3TC9tKzk1TG5oM0hQSGJzQVVBWGJzcUNLVkFobzhOUy82UVBZRlFVc3NLR2UvcmVxNkZ3RmpscXRrNFF6Sk8vdENSZnJFbDhaVHRTT1JzWmtxM0JjalpJM1FtTzl4OVpzZmNpRlhCRWNTMDJnRjU3SWxRYU5MTnNlRUNZRnBwcTBSMFJWRnc5SEFjVnhYUEpUVytCQWNxR2l2VnJOTkhNdlBuWXp5TDRNMzMxMkFFNXhiL2J6K1B2MW1tTTAydm5mem1XT2IwMTVVWjdoRFRIeWppRmppU1hSb0lwOTM5Z1NaQmx5cHBFYjhTaWhXQjRaSkxuTW03MDRwcWNobTI1Q1NsVVltMUdJbzRJak1GdDN1dHVya3JlNjRPK2U4VmU2bk9wZmFXVHVIRXZzTFlRcVA0eXRjTlFaajJTbURwWDBYYURTWmt1VWlGYkNVdUY1TjFnbGJOM3RYYWNLMmdFVTNlU3hjOUMwalROa3BrYllNbVNtV1VTeFQ4eU1tcXJEckVFdkVpRXpEOGxWYk95ZHp0SU5PRFhNNFUzcy93RTc4anpSRHdNQUFBPT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["abb"],"name":[2],"type":["chr"],"align":["left"]},{"label":["region"],"name":[3],"type":["fctr"],"align":["left"]},{"label":["population"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["total"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["population_in_millions"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["rate"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["rank(-x)"],"name":[8],"type":["dbl"],"align":["right"]}],"data":[{"1":"New York","2":"NY","3":"Northeast","4":"19378102","5":"517","6":"19.3781","7":"2.66796","8":"29"}],"options":{"columns":{"min":{},"max":[10],"total":[8]},"rows":{"min":[10],"max":[10],"total":[1]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>You can use other logical vectors to filter rows.</p>
@@ -1178,6 +1248,13 @@ rank(-x)</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZmlsdGVyKG11cmRlcnMsIHJhbmsoLXgpIDw9IDUpICU+JSBoZWFkKClcbmBgYCJ9 -->
 <pre class="r"><code>filter(murders, rank(-x) &lt;= 5) %&gt;% head()</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NSwibmNvbCI6OCwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbNSB4IDhdIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQmwxVHkyc1RRUmlmWkhmVHpVcEtiS1AxVkdORmFNRUV0VjRLZ2hzVDhXQ3FxUVhOUVFpVFpKTU0yY3pFbVZtdHQxN1VTMEJ2SGxYdzBuOUFFQzg5ZXZUWW95Z29lUEpRSDZmcTdNN001ckV3L0g3Zlk3N1hmSHVuVWw5MzZnNEF3QUJtSWdFTVMxQmdsV3NibHpjQU1KTkNTQUFUcEVQY0VVNkxndGppWkVNdlpjaFZFT01VdFhpZWRQSmw0Z2VESm9MS2xxNlNBREVFc1ZiWW01QSs5aUZ1eHpKaWpBUVVLWGwrbXdTOGx5OURTbndrYmsyblNsYkttbFZMbW0xV1luWmJzKzJ5S0RZVDNSVFN4REVrVG5XVzhyMkhuczlVTGxPWGZvdFEzdk1nNDBwaFJhVXBJUk5aODJVUGN3cDlwVFR2ZWNKN09yalY4aUhUc2VPTUhkamloQXAyRlBZY3VwVlc3djhPWjEvYXVuazZ3cnVwS3hJUG51OUgrcmUvZ1B3aWY3ZStId2x1OEZNaXJVbmtXWW5vTTVqMHYvcTFWSHY1MGI3bUxxeWN2NTdzdlhDWFRpMGJmNnduN3RMaDNvM1IwNUc3c052b3YyNGVpK05mWU4vZkhQdzRkSmYvZGxkZnZaOXpjOVc5MGRhNWhudGkrT3pCSi9iRlBmN3R3OFd6Nzg3RThXVVp3RlZKM2F4Q1cyRk9sek05SGd3SG5oNlByWldNUSs0cHdZRE5waDRiOWJxSVlDVTVReklNZk1qSEdvc1RIai9HeWJHNWdYQmpnSHhmVUthZmlvNHoyQlRpL21waFoyMm10alFsajRxNnZuQ1prcnV5QTBzNkd2OW1udFZwUXc2TEhTcXV5S2VkQ2pkSGhqeXFBQ1FYMVdaT1hrN1FHVVUyd0dIeWRxSFZDM0Mvc0g0cHpCRFo1Y2tvdENhNExYT2F1akw5NDZRODNFVllOMno1c09ucE9jMkxMcU1taTBPS3NGNTJSMmhaY1hLZVRvdjRXaVAzOXVnL0FBYldtVDRFQUFBPSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["abb"],"name":[2],"type":["chr"],"align":["left"]},{"label":["region"],"name":[3],"type":["fctr"],"align":["left"]},{"label":["population"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["total"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["population_in_millions"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["rate"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["rank(-x)"],"name":[8],"type":["dbl"],"align":["right"]}],"data":[{"1":"District of Columbia","2":"DC","3":"South","4":"601723","5":"99","6":"0.601723","7":"16.452753","8":"1","_rn_":"1"},{"1":"Louisiana","2":"LA","3":"South","4":"4533372","5":"351","6":"4.533372","7":"7.742581","8":"2","_rn_":"2"},{"1":"Maryland","2":"MD","3":"South","4":"5773552","5":"293","6":"5.773552","7":"5.074866","8":"4","_rn_":"3"},{"1":"Missouri","2":"MO","3":"North Central","4":"5988927","5":"321","6":"5.988927","7":"5.359892","8":"3","_rn_":"4"},{"1":"South Carolina","2":"SC","3":"South","4":"4625364","5":"207","6":"4.625364","7":"4.475323","8":"5","_rn_":"5"}],"options":{"columns":{"min":{},"max":[10],"total":[8]},"rows":{"min":[10],"max":[10],"total":[5]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ol start="5" style="list-style-type: decimal">
@@ -1197,6 +1274,13 @@ rank(-x)</code></pre>
 <pre class="r"><code>no_south &lt;- filter(murders, region != &quot;South&quot;)
 no_south</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MzQsIm5jb2wiOjgsInN1bW1hcnkiOnsiRGVzY3JpcHRpb24iOlsiZGYgWzM0IHggOF0iXX19LCJyZGYiOiJINHNJQUFBQUFBQUFCbVdXRDFCVVJSekgzOG5kY1p5Z1dHanE1QXlrcHBpaUJ2STMyajA0a29QdVlFQTRhQkRZdTN0d0w0NzM4TDEzd0pVRjFaZzVZNVpwMnBqL210S1JsRXFkMGJMSlRIRWkvNVNOZjh2S1AwVCt5Y0tacERMVWV2ZmU3dDV4M2N5YnorLzcyLzN0NzdkNys5NXVtYlVxMVZ4bFpoZ21pdEhyZEV5VVFURVpRMzVwVmxvV3craEhLRUxINkptWUlOdVZUdmNyaGtsNTRwWG5JZHhndFBpUTFJU3dpcmFJM0RNQ1Q2UTVIL200QmtIa09lSXg1UXMrUVVRZUFldVIrUUxQczI2WmMvdGxNbUloYWtNY2g1WEI1a0ZlMHR0azgvazRYdUFra3M3R2V6aEUwK2x0UWh1eGpjV0lseERwYUxBamptZXhpTE1qU1VKdXIxOWlaWm4wTU5rNXQ1ZHJSRHpXTVhaT0tVd1NaQlRxSUVtQ1h5U0ZSZHNGWGc3bE5qbFlseGkyRWtZSDI0bzhSTVU1MkxiRVF0VGNJbms1a2RSaERqcUxXRkZpQStFZU85dk91WVhRc0cySjFZTFloSFdzUXhCbGI2SVZOWVVxMDVkNE9kTGZXQ0t5alFLWlJHd3B5L05Td05lS1F2OUFiSmxYOExDSk5zbUhlQS94bFF2Ky80MWFJU012bVdzbEt6WXIweVZsT3BFeUQ3NVJwb2xpbkp6a0ZuaUpJNDVvWjBCb1ZycEU3SllSbG1KcVBVV3NmQXUxU3FpMWdGaUZObUxack5SNmtsb09hdEZSaXN1SlpTK2dGbTIxMC9Ic05OWk84OXBwWGdlTmRWUlNxNUJhUmRTeVU2dWFXclRTRWhwUlVrYXNVbHBMR2EybG5FWlUwQW9xcWVXa0VVNGE0YXhXM3NnNGRXMlZQeXZpMFlYWlVSR1BEai9oUG4wWWRXSHh1b2crNGJIaGViQWU5c2t3K3RoVzFpZmhIYUFuTzBYZHdDeVN5R1l5cUh1UHZpZnE5czVuZVZsRVBySVRuYXpTZS9qZ0JyZnkyU0ZqMDR3TnlDMExvbUxkVTU1UndiV3hUTjN4Z1VMR1V1VktnMEcrY0doZFlwRGxzOHRWZjdGMVcyZVFhVjkwcXpyajExcVYzdlpCTGU3VE0ycjcvTnhyS2d0Nk9sUi9tdldhMXY3UEkrcTRydS8rVmZXQ25BMnFyanozMm9FZ1UrWityZnB6ZnBxcTBycnVKUzNmdUZaVjEvZGNWL3VCcHUycUZwOFpxZzl5eXNzYlZkMmdHNjNTbnIxU3F5dTdRbTJmTTNxdHFxZWY2MVZaTUM1ZEhYZnkrSFdxcnQ0Nm9MSmk1eTdWbjVTNmdORis2cnJBVkUzQVpzeFY3MmtzaFJxck1CL0U3ZE14V3c5b1JKanpzTCtrVStQRFdDL0VPbkJDWXhIV2N2enc4U0JtQldZQ0pvL0hMOFhzMUFKZ1BHNlg2alhtWWIzNGRZMXpzRTdFVE1ka01KMFI4OFA1R0x3dTRKZDk2VFc3NjNMaGhKVytLOHV1K0dIZTVoZmVxU2paRHhNbTlhL3c3Sm9MWTljZW1ISDMrK1ZnOE5DUm9SeC9FcmlkY09LSE80Yy9nY2xkaFcvOWFkZ09Kd3h3UnpZT1RvYW0yb0hhM2xnWkdrL09YdHB0R2drRzRWK3RQUzgrQ3lmT09ieHQ3TUk2T0xuSDExcDA0Vzg0TmlOejBuT2ZGOElIYm5YTlgvN3ljakRRWmR2Q2R1d0Zkek4zT3FkMkhvS0dkZnVlWGRseUJnekc1NTA3K0Y0RlRIcFRTcW83Tmg0eWdVZlAzTGdFWUdyOTBhSWJyOWFBL2lVL3Z2YkdoMi9EYWZkOXRQVk8xUTQ0YXFzNU1VRjhIaVkzYnN6MEhLMEJOOCtXUHI5aDliZmdldHloaktUVHVkRDRvUERadE53YThMTnh6TjJxSlNmaHhQN2ZUcFN0S29ialBnL2tqY3d0QnBkanNqeGIxaHZKdWtCRHc1Zjk2NDlZWVZ4TXdkb3RCVjNRZk8reHJPYmtYbkNydTYva3FiM3QwTEFuNDc2RjZ5K0JpMjNMTmkxN2JERzQyakU2cDd0dlB6VHVHdDk1OFA1TXFGdFNvQTlzTW9OZlJrL2hMaFRVUU4zNzh5NVlwdDhBMXp0MjdSMTdjVHU0Yy9xVGZhY1dyNGJ4ZTY0ZVAvanhUakJ3KythWTh6MC93YkV0U3hlZGtDNkRQeHA3ZHgvdk9BdnVtTDZJcWcrY2dxYkxscWFUYXozZ25HUDNoc0lmZGtDanEzYUZMd3BDYy9UbXAyZk5HSUFHNTVCcmpXa1M2SXUrMGpkaDd6MW82TWllK0UvOFYrRDNNVDhmWExwaUpvenRuZnROZ0xzQS9pNnpPNDY5c2dZTUxDcEhxUjh1QnRmYXUyZWZmL2NvT0NWdnYyUTg2d2QvSnU1ZndhVFBBVU5GbGJtaXF4YmNjR2NQbGQvVjBYWEp3ZnRxQ3VaTXpIek1MTXhDdlAvblIreExnRGtmdHorTzlST1llT1BTOTlDS2FTSjVjQnpFSk8rMURUTVRNd1V6bDlTRG1ZMVpnRW5lWHdzZXo0cjVCS1lOTXcvVFF1STFIZm1aNWxFelN6N1RKdUtVWkNTVFMxQVVjcm5JNTF1NXVuRDBTbUZ1RVZyOFBpU0hQQVpadVoyUVEyRmNxTG1PNCt1YU9lVm1xRnhBeUpFaGhqS1lSTVEzVFovVm5oeFJXNHdvdEtXUStvSUg2UWc4aFllMGpsSC9Nc09QRjdNSHlTaWxRVlJDR1BXSUdUWmN0TkFpcXhVd0k0TDNaRU5Fc0U2TWNNVDcrV0J5enl6bElzbzN6VXBOQzJaZ3RDT1Z3UlhwdEdxb2JkSnk2a2xsQnJKeUxOOFl1dDhhZk1qRmtuVWFwY3hTbldSS2k4aUZibkNLVjBvSlgwK3pXL0FSajNaKzN2c1BBeTJuZXg4TUFBQT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["abb"],"name":[2],"type":["chr"],"align":["left"]},{"label":["region"],"name":[3],"type":["fctr"],"align":["left"]},{"label":["population"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["total"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["population_in_millions"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["rate"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["rank(-x)"],"name":[8],"type":["dbl"],"align":["right"]}],"data":[{"1":"Alaska","2":"AK","3":"West","4":"710231","5":"19","6":"0.710231","7":"2.6751860","8":"27"},{"1":"Arizona","2":"AZ","3":"West","4":"6392017","5":"232","6":"6.392017","7":"3.6295273","8":"10"},{"1":"California","2":"CA","3":"West","4":"37253956","5":"1257","6":"37.253956","7":"3.3741383","8":"14"},{"1":"Colorado","2":"CO","3":"West","4":"5029196","5":"65","6":"5.029196","7":"1.2924531","8":"38"},{"1":"Connecticut","2":"CT","3":"Northeast","4":"3574097","5":"97","6":"3.574097","7":"2.7139722","8":"25"},{"1":"Hawaii","2":"HI","3":"West","4":"1360301","5":"7","6":"1.360301","7":"0.5145920","8":"49"},{"1":"Idaho","2":"ID","3":"West","4":"1567582","5":"12","6":"1.567582","7":"0.7655102","8":"46"},{"1":"Illinois","2":"IL","3":"North Central","4":"12830632","5":"364","6":"12.830632","7":"2.8369608","8":"22"},{"1":"Indiana","2":"IN","3":"North Central","4":"6483802","5":"142","6":"6.483802","7":"2.1900730","8":"31"},{"1":"Iowa","2":"IA","3":"North Central","4":"3046355","5":"21","6":"3.046355","7":"0.6893484","8":"47"},{"1":"Kansas","2":"KS","3":"North Central","4":"2853118","5":"63","6":"2.853118","7":"2.2081106","8":"30"},{"1":"Maine","2":"ME","3":"Northeast","4":"1328361","5":"11","6":"1.328361","7":"0.8280881","8":"44"},{"1":"Massachusetts","2":"MA","3":"Northeast","4":"6547629","5":"118","6":"6.547629","7":"1.8021791","8":"32"},{"1":"Michigan","2":"MI","3":"North Central","4":"9883640","5":"413","6":"9.883640","7":"4.1786225","8":"7"},{"1":"Minnesota","2":"MN","3":"North Central","4":"5303925","5":"53","6":"5.303925","7":"0.9992600","8":"40"},{"1":"Missouri","2":"MO","3":"North Central","4":"5988927","5":"321","6":"5.988927","7":"5.3598917","8":"3"},{"1":"Montana","2":"MT","3":"West","4":"989415","5":"12","6":"0.989415","7":"1.2128379","8":"39"},{"1":"Nebraska","2":"NE","3":"North Central","4":"1826341","5":"32","6":"1.826341","7":"1.7521372","8":"33"},{"1":"Nevada","2":"NV","3":"West","4":"2700551","5":"84","6":"2.700551","7":"3.1104763","8":"19"},{"1":"New Hampshire","2":"NH","3":"Northeast","4":"1316470","5":"5","6":"1.316470","7":"0.3798036","8":"50"},{"1":"New Jersey","2":"NJ","3":"Northeast","4":"8791894","5":"246","6":"8.791894","7":"2.7980319","8":"24"},{"1":"New Mexico","2":"NM","3":"West","4":"2059179","5":"67","6":"2.059179","7":"3.2537239","8":"15"},{"1":"New York","2":"NY","3":"Northeast","4":"19378102","5":"517","6":"19.378102","7":"2.6679599","8":"29"},{"1":"North Dakota","2":"ND","3":"North Central","4":"672591","5":"4","6":"0.672591","7":"0.5947151","8":"48"},{"1":"Ohio","2":"OH","3":"North Central","4":"11536504","5":"310","6":"11.536504","7":"2.6871225","8":"26"},{"1":"Oregon","2":"OR","3":"West","4":"3831074","5":"36","6":"3.831074","7":"0.9396843","8":"42"},{"1":"Pennsylvania","2":"PA","3":"Northeast","4":"12702379","5":"457","6":"12.702379","7":"3.5977513","8":"11"},{"1":"Rhode Island","2":"RI","3":"Northeast","4":"1052567","5":"16","6":"1.052567","7":"1.5200933","8":"35"},{"1":"South Dakota","2":"SD","3":"North Central","4":"814180","5":"8","6":"0.814180","7":"0.9825837","8":"41"},{"1":"Utah","2":"UT","3":"West","4":"2763885","5":"22","6":"2.763885","7":"0.7959810","8":"45"},{"1":"Vermont","2":"VT","3":"Northeast","4":"625741","5":"2","6":"0.625741","7":"0.3196211","8":"51"},{"1":"Washington","2":"WA","3":"West","4":"6724540","5":"93","6":"6.724540","7":"1.3829942","8":"37"},{"1":"Wisconsin","2":"WI","3":"North Central","4":"5686986","5":"97","6":"5.686986","7":"1.7056487","8":"34"},{"1":"Wyoming","2":"WY","3":"West","4":"563626","5":"5","6":"0.563626","7":"0.8871131","8":"43"}],"options":{"columns":{"min":{},"max":[10],"total":[8]},"rows":{"min":[10],"max":[10],"total":[34]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
@@ -1204,6 +1288,9 @@ no_south</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubnJvdyhub19zb3V0aClcbmBgYCJ9 -->
 <pre class="r"><code>nrow(no_south)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDM0XG4ifQ== -->
+<pre><code>[1] 34</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ol start="6" style="list-style-type: decimal">
@@ -1214,6 +1301,13 @@ no_south</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZmlsdGVyKG11cmRlcnMsIHN0YXRlICVpbiUgYyhcIk5ldyBZb3JrXCIsIFwiVGV4YXNcIikpICU+JSBoZWFkKClcbmBgYCJ9 -->
 <pre class="r"><code>filter(murders, state %in% c(&quot;New York&quot;, &quot;Texas&quot;)) %&gt;% head()</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MiwibmNvbCI6OCwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbMiB4IDhdIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQm0xU1FVdkRNQlJPdDBhN3dvWWdlQk4yVU5ERGhqSVJkaEE2NXNuREVCMXVBMkZMdDJ3cmk4bElVemZFZzFjUGduanc1TS93TjNqeHIvZ1BCbXJhSnAwckZrTGUrOTdMOTc1OHpjVnB1MkszYlFCQUZwaUdBYkpRaGdEV3o2dEhWUURNakV3TVlJSmN1TTlsMDZZTUxMazI1TXFvZ3RYQXMyS0g4WW5LWVJQUGtaOXF5alE2T21xMkpWRStxb1hzMGI0eWFZM2dXMHcwZzZuUVhJTnhNY2JJRjNyT0pRdkVXQ1g1cUZxc1l5bzRJZ28wVzFoMnI1TERQa0crNWs0bURsRmZNQzZqYjdrS29hWWF2MXYwWkZDYkxmTFBJUG9pM0huWWl4TG5NZDRUdk5MN1BQdDZ1bmFxdS9YN3E1ZjNCSWV0aGZ0cWJUdTVOL2ZqYU9jd3dVL2l3ODZCcGxtVlNkRU4xakl0RGZvQ0NheVNMSEpkTFovamtjZW95dXdwbXdZRWlTVUNCUk9KS1Z2TGN0ZWozUnVQRUJuNjJqSytuR0J4UkNkN3BmbCtTbHVPczFsWjYvdm5SMlovVXZiYUF5UlFlY2psa2RqaUZicDFOaFdSQXBBSm54ZE1IVFo0Q3RnSWFEaDhVT3FQQXpvcFZZN0RDVXFCb1JRcE5VbHN4VE5OclF4cTV6QWRlVlJmR0JMa1l1MVRRZDR5dW1SNXlqMnFINTB0VWIvODEwKzd6NGhHNHZmei9RdThwOEtZVmdNQUFBPT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["abb"],"name":[2],"type":["chr"],"align":["left"]},{"label":["region"],"name":[3],"type":["fctr"],"align":["left"]},{"label":["population"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["total"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["population_in_millions"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["rate"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["rank(-x)"],"name":[8],"type":["dbl"],"align":["right"]}],"data":[{"1":"New York","2":"NY","3":"Northeast","4":"19378102","5":"517","6":"19.37810","7":"2.66796","8":"29","_rn_":"1"},{"1":"Texas","2":"TX","3":"South","4":"25145561","5":"805","6":"25.14556","7":"3.20136","8":"16","_rn_":"2"}],"options":{"columns":{"min":{},"max":[10],"total":[8]},"rows":{"min":[10],"max":[10],"total":[2]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Create a new data frame called murders_nw with only the states from the Northeast and the West. How many states are in this category?</p>
@@ -1223,6 +1317,13 @@ no_south</code></pre>
 <pre class="r"><code>murders_nw &lt;- filter(murders, region %in% c(&quot;Northeast&quot;, &quot;West&quot;))
 murders_nw</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MjIsIm5jb2wiOjgsInN1bW1hcnkiOnsiRGVzY3JpcHRpb24iOlsiZGYgWzIyIHggOF0iXX19LCJyZGYiOiJINHNJQUFBQUFBQUFCbjFWZTB3VVJ4amZnOXZqdUFKaWk4UWFUWTcwSlZZUUNnRUJ5YzV4aCtVZ2Q1QkRPREFnREhjTHQyVnZsK3p1OFZBaTJLWnBTVnBTb3BXRVlHdFRNUnFrZjBoU0lra0o5WkVTc2EyTlZreHJVbEdwMWRMU3BLVXZoSFlmTTR0YzBtNHkrZjErMzN6emZkL016c1BqcU1xd1ZGa0lnb2drakFZREVVbktsQ0R0WlRtWk9RUmhqSkNGZ1RBUzBRcTJ5MDVQeWNRc3QzaTVKYUlPazQyRllqTkVLc29tTVB0NURrdUxIYkpNSXk5d0RMYVk3VHpMQzlEUEkvMkVuZWM0MmljeHZwQ0VJeGJCTnNnd1NKRk9Qd3hnYjlJRkdZNUdJdFlGUlJINkFpR1JsaVFSRitEaU9RbnFCWmpjZEN2MFl4WHJwdHVzUlREWUlnWVlBWWV4S01aaVdoRHBqc2N0THJxZDhlRzhac1ZTelF2Tk9HeXBRRGZ4SEZJeFpUVEhpUjFzSzF5ZFo0d253UHRwcTFOa0llZEhObU9GQkFPNHprcGFDTXFsNHBSZUtOZkVOVWw2MENodkJ4K1VMV0hMSFdFcjBkbGV6T3cyblpYcWJBOW1SVTdNbkE3TVhJVTYwOGU2OUJIdVNwMFY2YXhZWnk2ZFZXTlc2c0dzVEkvbjBmTlc2SkVyZGViVi9ielY4dGFLVmVjb3IxRllNNFR4LzlLRy83RVp3L2F5aWFWYmFWWkVLMnRFMW1nM0wwZ0JHb3I0bjVEbGZFakMveXRXN2JYYWFVNFNJSXQvcUplV3ZkY0dKMzN5ZWNDeDlZeU4wQ2Z4Z3N4VzVCYW56TlgyM0ptUGxOTm1xMnJJQkFvZXVqQmdWYkI4UjdscUwzR2M2bFl3ODlNUlZXZi91RS9GVE1jRGJkemZMNnJqVXRPL1VMVmo0RFhOUDdGVjFmVVhIMDRxU0RVUHExcll2MVN2b0N1M1Q5V0IzQXBWcDYzclYzVmhZcFk2L3BtTkE2cXVQcm1nWWxMR0hrTDcxTHBCaGlaQUVPSGhFeHFXQVEyckVHNUcvVnNSUG8rd3RudXR2UUpoQWtKdUVzVkQySzA1Z2dMVTMvbU9obWxJWnlGRVJRSXZXQk1QMTAxOVA1NVZNMXFYRDU3dVkrLzMzQStCZ3VPSFBxZ29uUUFKVytaNi9XZlRRVXovNUxibGI5NmlGaTljWHNvTEpWRi9KVnk5OWVqU09Xb1IvTkY2OGRVRFlGUGFwVk1iYXV1b2hkUE9JYnByREpBRDR3ZjZXbTVRaS9FRk44K2ZxQUJKNzRwSmRWYzJBcUxqcFJ2enN4VElxSjh1bm4rN0JzU2R0RmdUaElNZ3VlbTluZjdwR3VxWG1iS0R4NDU4QlV5YitVOWV5SytoN3BuV0wxZTlmZzFzbXZ2cHF1ZHdDWFVuT3NjL05HalMxNXRzL0d4dThMSUR4RVlYOWc4Vm5nYVdsVjA1d2VRcDZyZVJ1NlY3eDlvQitYSDJrN1dEczlUdHRwNzNlM1oxVWo5MHJjc2J1VHRCUGV3Nk83Ymg5akQxNk90ejQ5YzdqMUMvTmsyTmZ0NDFBOHgzYk0zWCt2M1VUZmZvc2FKYlo0Q3BZVjh2R3dtQUplcjRLeW5iRmdEcFhXbzRhdDVDL2J6KzN2azNlcmVEbUtuMEx6dVk3NmcvUFM3M2xUZVBVZy9hUjNaOCsrRTBkVjBhbmpYTmhLamZyUk85UkZZYU5lL0xYU3BmTnVoMTU2SC84U3pDN1FqdENITVFGcUg5OERMU3V4RUM3SS82OGI1ekl0eUpNQlZoUHNKQ2hIaS8yZEQ0M1FpZENBc1FGbmFqYmJMMkdITXdTT05qYk1aR1VZSVNmamNpWVVNRFB0N3lhOERvTjdlbGhXOEpzVkJhdFpBU0wrbVhSdUpxZHgzRDFRVVpscFVwZnIrTXdtb0dzd0M1NXEwcDdjbGh0VVVMZkZzcXJrKzVPQ1BRRkJJMXg4aC9pTFhYajhVUEpaamFLTWhEQ1BVS1doTXVpbStSMUFxSUNPV0JKOE1HRzRRd1EzeUlVNUw3VStTbmwydE95Y2hXTWhEYWRVdWdpZ3hhTlRvM2F6bU51RElTcnh6Tk5hMis2Q1FMRzJpOFRuSHlMTlZKcHJZSXpPcERLVnZGMU1mWDArTGpXV3pSN3RlVmZ3R2Q2Nm05MkFnQUFBPT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["abb"],"name":[2],"type":["chr"],"align":["left"]},{"label":["region"],"name":[3],"type":["fctr"],"align":["left"]},{"label":["population"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["total"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["population_in_millions"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["rate"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["rank(-x)"],"name":[8],"type":["dbl"],"align":["right"]}],"data":[{"1":"Alaska","2":"AK","3":"West","4":"710231","5":"19","6":"0.710231","7":"2.6751860","8":"27"},{"1":"Arizona","2":"AZ","3":"West","4":"6392017","5":"232","6":"6.392017","7":"3.6295273","8":"10"},{"1":"California","2":"CA","3":"West","4":"37253956","5":"1257","6":"37.253956","7":"3.3741383","8":"14"},{"1":"Colorado","2":"CO","3":"West","4":"5029196","5":"65","6":"5.029196","7":"1.2924531","8":"38"},{"1":"Connecticut","2":"CT","3":"Northeast","4":"3574097","5":"97","6":"3.574097","7":"2.7139722","8":"25"},{"1":"Hawaii","2":"HI","3":"West","4":"1360301","5":"7","6":"1.360301","7":"0.5145920","8":"49"},{"1":"Idaho","2":"ID","3":"West","4":"1567582","5":"12","6":"1.567582","7":"0.7655102","8":"46"},{"1":"Maine","2":"ME","3":"Northeast","4":"1328361","5":"11","6":"1.328361","7":"0.8280881","8":"44"},{"1":"Massachusetts","2":"MA","3":"Northeast","4":"6547629","5":"118","6":"6.547629","7":"1.8021791","8":"32"},{"1":"Montana","2":"MT","3":"West","4":"989415","5":"12","6":"0.989415","7":"1.2128379","8":"39"},{"1":"Nevada","2":"NV","3":"West","4":"2700551","5":"84","6":"2.700551","7":"3.1104763","8":"19"},{"1":"New Hampshire","2":"NH","3":"Northeast","4":"1316470","5":"5","6":"1.316470","7":"0.3798036","8":"50"},{"1":"New Jersey","2":"NJ","3":"Northeast","4":"8791894","5":"246","6":"8.791894","7":"2.7980319","8":"24"},{"1":"New Mexico","2":"NM","3":"West","4":"2059179","5":"67","6":"2.059179","7":"3.2537239","8":"15"},{"1":"New York","2":"NY","3":"Northeast","4":"19378102","5":"517","6":"19.378102","7":"2.6679599","8":"29"},{"1":"Oregon","2":"OR","3":"West","4":"3831074","5":"36","6":"3.831074","7":"0.9396843","8":"42"},{"1":"Pennsylvania","2":"PA","3":"Northeast","4":"12702379","5":"457","6":"12.702379","7":"3.5977513","8":"11"},{"1":"Rhode Island","2":"RI","3":"Northeast","4":"1052567","5":"16","6":"1.052567","7":"1.5200933","8":"35"},{"1":"Utah","2":"UT","3":"West","4":"2763885","5":"22","6":"2.763885","7":"0.7959810","8":"45"},{"1":"Vermont","2":"VT","3":"Northeast","4":"625741","5":"2","6":"0.625741","7":"0.3196211","8":"51"},{"1":"Washington","2":"WA","3":"West","4":"6724540","5":"93","6":"6.724540","7":"1.3829942","8":"37"},{"1":"Wyoming","2":"WY","3":"West","4":"563626","5":"5","6":"0.563626","7":"0.8871131","8":"43"}],"options":{"columns":{"min":{},"max":[10],"total":[8]},"rows":{"min":[10],"max":[10],"total":[22]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
@@ -1230,6 +1331,9 @@ murders_nw</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubnJvdyhtdXJkZXJzX253KVxuYGBgIn0= -->
 <pre class="r"><code>nrow(murders_nw)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDIyXG4ifQ== -->
+<pre><code>[1] 22</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ol start="7" style="list-style-type: decimal">
@@ -1240,15 +1344,37 @@ murders_nw</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZmlsdGVyKG11cmRlcnMsIHBvcHVsYXRpb24gPCA1MDAwMDAwICYgcmVnaW9uID09IFwiTm9ydGhlYXN0XCIpICU+JSBoZWFkKClcbmBgYCJ9 -->
 <pre class="r"><code>filter(murders, population &lt; 5000000 &amp; region == &quot;Northeast&quot;) %&gt;% head()</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NSwibmNvbCI6OCwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbNSB4IDhdIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQm1WVFRXZ1RRUlNlVFhiVFpHMXIybXJ4R0JCRWhZUkNDNUxUSmlaS2dtUXBzZFpjcEV3MjAyYnBaaWJNenFZRlFZTWdlUEFvRnNUZVBBajFwS0JYRVk5ZVJLRkZQRmp3b2ljdlJTK3R6dTdPYkpvNE1MenZmZlBtL2MyYmVya3hyemQwQUVBY3FJb0M0aHFIUUNzdDVoZnlBS2d4cmloQUJTbGZibktqR1E2U2ZLZDlLM0Z3b2tRd1JoYXpMWThKU3F0Qkd5T2hUSmhvSTFPQm5hN2J0cWtreCt0dDBrS1pxdXRBM0JMYzJES2lIWUxaaVA5WWFVbWkyaFdKeklwRTlhcEV5MHM4dzRuZ3BwLzJmM3VvbklTRGVzaHhSU3hWc0NtVFVOWkcwSTBxdVU0ODFvNHE4VTh6SllRWmhZNGcxWnVJV3c4NzF5d0h1dEozRkhFVldveFFqbzc0bnZUTml0Zkt6L3NjRkJmS1AwQWdaM3VCbkR1NUZjaXpaNTZBY0FYMmhVWWhVQXJuUXJKd1NzZzVJVUcwUXZ2eHJiY1hENzg4TkE0S3YzdnY3OTAyRHRLWDk5NDl1Mkg4MmwyOHMvM29vL0U5TVhYWXVQOHBzdGRlWDVxKzlYVGYrSG4zNVp2VDMzYU1QZlBWZHVYckMrTlB2V1orZVBEWStNeDI5aE83WG1TZkYzR3ZDbGtWc3RnWGVsK2tNOXdlRER0SXRpY3BTWmRCSnNjakRwdE4yVGFLMW15Q2hhWjNTZGR6SUJzd0dpTXNlb3pad2ZHS2pWYzZ0dU53Nk1xbm9vTUlTUXJ4K3ZuczVvV1IzRktVYk9Sa2Z2NHd4VVFKV21nWS96dnlySG9MTXBoYnBmeEsrTFJEN3NaSWx3VVpnTmlNbU16amx4VTZRcVE5N0FkdlphMjJoOWV6ODM2RDljRUlCeGtwd3BIRXlUQ21Lak9USHllQjhOcmdHMm9PYkNMWnAwbGVaVkJrcmt0dExJZGQ1NnliTzk1UDNTS09aTUs1UGZvSE8yc01PVE1FQUFBPSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["abb"],"name":[2],"type":["chr"],"align":["left"]},{"label":["region"],"name":[3],"type":["fctr"],"align":["left"]},{"label":["population"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["total"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["population_in_millions"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["rate"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["rank(-x)"],"name":[8],"type":["dbl"],"align":["right"]}],"data":[{"1":"Connecticut","2":"CT","3":"Northeast","4":"3574097","5":"97","6":"3.574097","7":"2.7139722","8":"25","_rn_":"1"},{"1":"Maine","2":"ME","3":"Northeast","4":"1328361","5":"11","6":"1.328361","7":"0.8280881","8":"44","_rn_":"2"},{"1":"New Hampshire","2":"NH","3":"Northeast","4":"1316470","5":"5","6":"1.316470","7":"0.3798036","8":"50","_rn_":"3"},{"1":"Rhode Island","2":"RI","3":"Northeast","4":"1052567","5":"16","6":"1.052567","7":"1.5200933","8":"35","_rn_":"4"},{"1":"Vermont","2":"VT","3":"Northeast","4":"625741","5":"2","6":"0.625741","7":"0.3196211","8":"51","_rn_":"5"}],"options":{"columns":{"min":{},"max":[10],"total":[8]},"rows":{"min":[10],"max":[10],"total":[5]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Make sure murders has been defined with rate and rank and still has all states. Create a table called my_states that contains rows for states satisfying both the conditions: it is in the Northeast or West and the murder rate is less than 1. Use select to show only the state name, the rate, and the rank.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXlfc3RhdGVzIDwtIGZpbHRlcihtdXJkZXJzLCByZWdpb24gPT0gYyhcIk5vcnRoZWFzdFwiLCBcIldlc3RcIikgJiByYXRlIDwgMSApXG5teV9zdGF0ZXNcbmBgYCJ9 -->
-<pre class="r"><code>my_states &lt;- filter(murders, region == c(&quot;Northeast&quot;, &quot;West&quot;) &amp; rate &lt; 1 )
-my_states</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXlfc3RhdGVzIDwtIGZpbHRlcihtdXJkZXJzLCByZWdpb24gPT0gYyhcIk5vcnRoZWFzdFwiLCBcIldlc3RcIikgJiByYXRlIDwgMSApXG5gYGAifQ== -->
+<pre class="r"><code>my_states &lt;- filter(murders, region == c(&quot;Northeast&quot;, &quot;West&quot;) &amp; rate &lt; 1 )</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiV2FybmluZyBpbiBgPT0uZGVmYXVsdGAocmVnaW9uLCBjKFwiTm9ydGhlYXN0XCIsIFwiV2VzdFwiKSkgOlxuICBsb25nZXIgb2JqZWN0IGxlbmd0aCBpcyBub3QgYSBtdWx0aXBsZSBvZiBzaG9ydGVyIG9iamVjdCBsZW5ndGhcbldhcm5pbmcgaW4gaXMubmEoZTEpIHwgaXMubmEoZTIpIDpcbiAgbG9uZ2VyIG9iamVjdCBsZW5ndGggaXMgbm90IGEgbXVsdGlwbGUgb2Ygc2hvcnRlciBvYmplY3QgbGVuZ3RoXG4ifQ== -->
+<pre><code>Warning in `==.default`(region, c(&quot;Northeast&quot;, &quot;West&quot;)) :
+  longer object length is not a multiple of shorter object length
+Warning in is.na(e1) | is.na(e2) :
+  longer object length is not a multiple of shorter object length</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXlfc3RhdGVzXG5gYGAifQ== -->
+<pre class="r"><code>my_states</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MiwibmNvbCI6OCwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbMiB4IDhdIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQmwxU1BVL0RNQkIxMmdUYVNLMUFJQ1lHMkVDaUZSSmQrSkFvWDFJWm9LZ01kS3ZjWXRxb3hxNGNoeklneElaWWtQZ0ZiR3o4Q0dEalZ6QXdzekVoRlM2eG5kSkVPdm51bmYzdStjVzEzZnFLVzNjUlFtbGtXeFpLTzVBaVorZG90YlNLa0oyQ3drSTJ5b2JySld5YWdpUURNUUdSMG8yeEN1NWp6ek5WVlpBMlo0azlxY3EreWFvMTRNbEZQWmlnWW1UUUdDVVhoUHFhd2RabzlwQUwyU0hZbHhwd2pua2dPN3JJUmQyNUhjS2t3RlNEOWdtQjNhUGtUb3RpMzNESEU4OXdTM0lCMlFBaUgycmJLcjA4aDFac0hhdzlJUFZGZUhsV0ZlVnRoUDdqbTk5djd6L3J3WHc1LytUT1RZdnJHUC9vM3ozZWJWeHRmazErdnQ3ZUw4VThsUnZGczJkb1JtVXlmRTZNekl3QmZZa2wwVVVhTjV0R1BqanVnZVdxY251OEYxQXNoNGdqdVl4Tm1SbTJHeDVybkh1VVF1b2J5OFJ3UWtaZzFsMG9YQzRtdEdVRjd4ZU5Qdk1qTGJXR0c5Ty9DWHZkVXl4eDhVekFFV1h4Q04wNDc4bElBVXFGcjh0SkhMWkVBcGdJV0RqOHRORHFCS3hiS0MySEU3UUNwQlZwTlhHZVVUTnRvOHd4emhIVzlwaTVzRU54a3hpZjhuREw2SkxGbnZDWWVYUXVvSDd4djU5dWkxT0RxUGN6K0FQOWZyTE5WUU1BQUE9PSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["abb"],"name":[2],"type":["chr"],"align":["left"]},{"label":["region"],"name":[3],"type":["fctr"],"align":["left"]},{"label":["population"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["total"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["population_in_millions"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["rate"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["rank(-x)"],"name":[8],"type":["dbl"],"align":["right"]}],"data":[{"1":"Hawaii","2":"HI","3":"West","4":"1360301","5":"7","6":"1.360301","7":"0.5145920","8":"49"},{"1":"Oregon","2":"OR","3":"West","4":"3831074","5":"36","6":"3.831074","7":"0.9396843","8":"42"}],"options":{"columns":{"min":{},"max":[10],"total":[8]},"rows":{"min":[10],"max":[10],"total":[2]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
@@ -1256,6 +1382,13 @@ my_states</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2VsZWN0KG15X3N0YXRlcywgc3RhdGUsICdyYW5rKC14KScpXG5gYGAifQ== -->
 <pre class="r"><code>select(my_states, state, &#39;rank(-x)&#39;)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MiwibmNvbCI6Miwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbMiB4IDJdIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQmwxUXdXN0NNQXgxU3JOQnBTR2svUVE3dE5JRUYyNUkyeVJ1bTNiaWFrcGdFY1ZCYVJBYzkrVnNUa2trU0MvMmUvV3ozOHYzKzNKU0xBc0E2RUV1QlBRa3R5RGZ2bWJUR1VDZU1SQ1F3OERYTXc4OWMrUEpVVmV2UHg0V2VFS3RJL3EwYW11SXU2R2ZtUzkrL1VhWWYwRDQ3cFpLd3IxcWs0V3lkZWhVQUgyTHRCdVg1NWRFT2JEbVZFWDFVN0FscnZYK1JOMWdHMDlFc2xpancycGpXYy9va2tnZXpjRnBReXpLZkdDWmlJVk5pTkdSdkpOMVdmOGNhVmRPWC8yRllBZUN2V0R0dHZjM3M3K3dTOGIzVTdUVkZOUExCbGVxQ1dESWtidkUxY0ZxY2pFS3MyM2xqTU00VjlTbWlVd1hEaTcvb0tlVE0rZ0JBQUE9In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["rank(-x)"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"Hawaii","2":"49"},{"1":"Oregon","2":"42"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[2]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -1269,6 +1402,13 @@ my_states</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXVyZGVycyAlPiUgc2VsZWN0KHN0YXRlLCByZWdpb24sIHJhdGUpICU+JSAgZmlsdGVyKCByYXRlIDw9IDAuNzEpXG5gYGAifQ== -->
 <pre class="r"><code>murders %&gt;% select(state, region, rate) %&gt;%  filter( rate &lt;= 0.71)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NSwibmNvbCI6Mywic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbNSB4IDNdIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQmwxU3ZVN0RNQmgwbXArcUVTMUluZGc2c0RZRGRLbUVsS0ZGS2t1RlFJSU9MQ1oxbTZpcFhUa09ZV0JnN1VNZ0hnQTJCbDRFQ1FZa1FKWGdMUXBPNHErUVJvcjgrWHkrTy92emNYZXdadzlzaEpDT0RFMUR1aWxMWkhhTzJxMDJRa1pKVGpSa29FbzZYa2xTUFdNaXRKV3kxSUxWd3drT0FqVXpEbG1DVlYzdGs2VFJ3OU5aNUFlY0tIQ2p6N2p3RzEwOFlRS0k1VlBDcDR3S0tWN05sS1dPY3RMK3hrSWNLeVNYSkl4VUZrT2hsVXljNEVnb3dEeGhzZkJYZVRMckRxR0M0eEFDbnhISkxvcWJYb2dqMEY0NWpyQW5HSmZWVXY2MWxPWitKUE83K2Y2MSs3VzVFN3dmbkx1di9jZmIzdHVEdXloL0w3YWZsdTZ6dVArMFh1SjFlWXFuQk9SMUFDT0JCVnlTeGNrNFlCUWk4blNscUZIaExIRkFKNzIwMGczS1BqTW42ajlyOGUwaEZ0Z1pjYmtsUDBKQnJzeG1RaHBLc1ZKZGRlRC9abzJ2QVZzeFRjMkhUYytQNmFUWjJrMGRWTHVRU3FRcElhajEzTk9BWktzSFJPZzRvSEIwTThRWEJKcFRrNmZNRHVuTWVFQ2hxYlpFSTBmSTl3TTgyMk1oSUhsL2xyKzhGMXRmMndJQUFBPT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["region"],"name":[2],"type":["fctr"],"align":["left"]},{"label":["rate"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"Hawaii","2":"West","3":"0.5145920"},{"1":"Iowa","2":"North Central","3":"0.6893484"},{"1":"New Hampshire","2":"Northeast","3":"0.3798036"},{"1":"North Dakota","2":"North Central","3":"0.5947151"},{"1":"Vermont","2":"Northeast","3":"0.3196211"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[5]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>This line of code is equivalent to the two lines of code above. What is going on here?</p>
@@ -1278,6 +1418,9 @@ my_states</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuMTYgJT4lIHNxcnQoKVxuYGBgIn0= -->
 <pre class="r"><code>16 %&gt;% sqrt()</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDRcbiJ9 -->
+<pre><code>[1] 4</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>The above statement is equivalent to log2(sqrt(16)).</p>
@@ -1287,6 +1430,9 @@ my_states</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuMTYgJT4lIHNxcnQoKSAlPiUgbG9nKGJhc2UgPSAyKVxuYGBgIn0= -->
 <pre class="r"><code>16 %&gt;% sqrt() %&gt;% log(base = 2)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDJcbiJ9 -->
+<pre><code>[1] 2</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Therefore, when using the pipe with data frames and dplyr, we no longer need to specify the required first argument since the dplyr functions we have described all take the data as the first argument. In the code we wrote:</p>
@@ -1295,6 +1441,13 @@ my_states</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXVyZGVycyAlPiUgc2VsZWN0KHN0YXRlLCByZWdpb24sIHJhdGUpICU+JSBmaWx0ZXIocmF0ZSA8PSAwLjcxKVxuYGBgIn0= -->
 <pre class="r"><code>murders %&gt;% select(state, region, rate) %&gt;% filter(rate &lt;= 0.71)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NSwibmNvbCI6Mywic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbNSB4IDNdIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQmwxU3ZVN0RNQmgwbXArcUVTMUluZGc2c0RZTFphaUVsS0ZGS2t1RlFJSU9MQ1oxbTZpcFhUa09ZV0JnN1VNZ0hnQTJCbDRFQ1FZa1FKWGdMUXBPNHErUVJvcjgrWHkrTy92emNYZXdhdzlzaEpDT0RFMUR1aWxMWkhhTzJxMDJRa1pKVGpSa29FbzZYa2xTUFdNaXRKV3kxSUxWd3drT0FqVXpEbG1DVlYzdGs2VFJ3OU5aNUFlY0tIQ2p6N2p3RzEwOFlRS0k1VlBDcDR3S0tWN05sS1dPY3RMK3hrSWNLeVNYSkl4VUZrT2hsVXljNEVnb3dEeGhzZkJYZVRMckRxR0M0eEFDbnhISkxvcWJYb2dqMEY0NWpyQW5HSmZWVXY2MWxPWitKUE83K2Y2MSs3VzVFN3dmbkx1di9jZmIzdHVEdXloL0w3YWZsdTZ6dVArMFh1SjFlWXFuQk9SMUFDT0JCVnlTeGNrNFlCUWk4blNscUZIaExIRkFKNzIwMGczS1BqTW42ajlyOGUwaEZ0Z1pjYmtsUDBKQnJzeG1RaHBLc1ZKZGRlRC9abzJ2QVZzeFRjMkhUYytQNmFUWjJrc2RWTHVRU3FRcElhajEzTk9BWktzSFJPZzRvSEIwTThRWEJKcFRrNmZNRHVuTWVFQ2hxYlpFSTBmSTl3TTgyMk1oSUhsL2xyOFQvN0NzMndJQUFBPT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["region"],"name":[2],"type":["fctr"],"align":["left"]},{"label":["rate"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"Hawaii","2":"West","3":"0.5145920"},{"1":"Iowa","2":"North Central","3":"0.6893484"},{"1":"New Hampshire","2":"Northeast","3":"0.3798036"},{"1":"North Dakota","2":"North Central","3":"0.5947151"},{"1":"Vermont","2":"Northeast","3":"0.3196211"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[5]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>murders is the first argument of the select function, and the new data frame (formerly new_table) is the first argument of the filter function.</p>
@@ -1322,6 +1475,13 @@ my_states</code></pre>
 
 select( my_states, state, rate, rank )</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6OCwibmNvbCI6Mywic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbOCB4IDNdIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQmd0eWlURG1pdUJpWUdCZ1ptQmhaR1JnWmdVeUdWaWRBeXhOTEJrWVdKaUFIRVlHRmdaT0VGMEJWQ1FNVnNuQUlBREVIRkFKTm8vRThzVE1UQ2lQMVRNbE1TTWZ4dkZOek14TGhYSjQvVkxMRlR3U2N3dUtNektMWUlKcy9rV3A2Zmw1VUI1TGFFbGlCcFROSHBaYWxKdWZWd0xqaGxmbTUyYm1wUU9aZkNETDdSK1VkODd2dEtteGYxSFBiNzMyOFQ3N1YvV2J0b3MrV0cxL3cyL3pYSTg3YSt6ZkNUNDUxTjZuWS8reVlxMys3Y1duN2ErVXJIN0lkcjNVL2syeTFlL2d2NHd3Y3h3OEdrQmVabkJ3WjREUWJsRGFFMHE3d3NTaDZqeWh0Q3VFUmdzbDFyekUzTlJpYUFneHd3U0xTeEpMWUQ1bUtVSmg1MldqbWNCWmxGK3VCek9GRjRpWm9CWnhvRnVWbkpOWURMTUtKc2lWa2xpU3FKZFdCTlFQNVAxRDA4S2VYMUNTbVo4SDFNUUVpa2xXTk0yTVJXZ0NBcVY1SUplazZDWm5sT1psNjVxWWcyd0F5ME1BTDVUTmdjUm1odGpKOUI5cUZpc3NwbFB6MGhHSmdUVW5NU2sxQjhyaEEzb1o3R085Z3FKTWVJeHpBVVdMOVVyeVN4Smg2cmlTODNOZ0ltRFBNZndEQUZKaW5WM0JBZ0FBIn0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["rate"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["rank"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"Hawaii","2":"0.5145920","3":"49"},{"1":"Idaho","2":"0.7655102","3":"46"},{"1":"Maine","2":"0.8280881","3":"44"},{"1":"New Hampshire","2":"0.3798036","3":"50"},{"1":"Oregon","2":"0.9396843","3":"42"},{"1":"Utah","2":"0.7959810","3":"45"},{"1":"Vermont","2":"0.3196211","3":"51"},{"1":"Wyoming","2":"0.8871131","3":"43"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[8]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>The pipe %&gt;% permits us to perform both operations sequentially without having to define an intermediate variable my_states. We therefore could have mutated and selected in the same line like this:</p>
@@ -1332,6 +1492,13 @@ select( my_states, state, rate, rank )</code></pre>
        rank = rank(-rate)) %&gt;%
   select(state, rate, rank)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NTEsIm5jb2wiOjMsInN1bW1hcnkiOnsiRGVzY3JpcHRpb24iOlsiZGYgWzUxIHggM10iXX19LCJyZGYiOiJINHNJQUFBQUFBQUFCbTFWZTJ3VVJSamZhMi92MVJZT0tBa2FOU2RXVWdnOVdsc2VoY0pPYVV0N3dMWFlJa1dqeU56ZDltNjR1NTJ5czBkN3BxRTFhSkJFK1l1QWlVVWtwSDhnRWlNRUNtcEliQXdQaFdoaURjUWFYcFdIQkMySlJORmljYTczelY2NXVMbkxiMzdmelBmN0hyTTcwMXk3dnR5MTNpVkpVcTVrdFZpa1hKa1BKYmxtVFdWRnBTUlpjeml4U0ZiSm1jSk92bWphK0VwSmN2Ti9PVXpZcTJNNGdPTVlxSTFURnNYbXBFN2VvSnFnam1vOWlqV0dHWEJYRFk2Uk5xcHJ4RnhSUTJOVXh5RUtQSytHYXBvYU5FZ3dZWWdsdFdvTWQyQmRCVjVZUzVpaGs2RGhvVzBlN3A2SUIwdzUrd3F1UmtJbXJWZXBIalpuYlExY2h4QmdzaStFSXlLdXd4ZUxFWTBTa2FuZHA0VUlOZ3V4K21pSHFiSnFZa21PVmFwbUpJTFJKSERuYXBvZ2JJS3I3TWRFRTdrNy9GaFB4ckFXQWw3Z3g0emhZQ1RCVk1Nd0pmMGtHQ0ZockFsSlArRTlZZFFRa25sK3dsanExOTVPTWo2TTBZUXV1TjFQTlNPVGhLTlJEZWdUOXNuV3FHN0JacHNLR3RVT1R3T090N01JTWR2c1NobFhxanBUa3hNdGZyV1RCR2xHdHNQek10V2p3Q2MxVXQySWVHcXdUbmszaFh4KzJscUxvNWtTckUwUllxbzBSV044SnpLdlZKT3VocW1vUG4rTnFta3NHZHVDTTI5TmZuT0VobFNQajAxbzVhUVdtdmlmMkduclk3R2RhOVZVUDVrcVNwWFhxcDNtaGxwZk1uQkVkSEdkcXNkNUkwV2k2d2gvbXpKcHVGb3g3NWdXTnN4a0MxcFZabml5bGpsYkNRdFNqUkd4eXQ2YXBISHVsOG82OVdVaDIvdlJyZFAzbjBkeTI1a2J2ZC9Vb2dKbjNaNit1b1BJdWUzeS9aKzZpNUZycktveVB2dXNjdi93Y05Nci9aMUlQcjV3Nm11OTE1RDd0NTZoQWZRZUttVzM5bCs2Y3gvbHpWdDJiUFRZQ1RTcGVWZmY3SlV0eXRXT0hmdDJWSFVwdDdzbkx6azhmQXJaanN6b0daaTJDRm5lcnJNbTk3bVVtNU9MeUpXNlY1SGw0L2xYcW92dklqblE3dzEvdUIwOTh5QmN2TytrWGJuVGZhUi8rdFZEcUhEMXdYZGZmUDUxNWVHUEp6OGY3TnFGM01kdlh4ZzQ4Wmt5OHZlOUtVTmZYMGJ1a3FJM1oyN2NpcWEzYjkvOFBidXUvQkUrZS9SQzkwWGxvZU9yM0kzSlFlUzRYaDM5WVU5SXVkUjRkRy9EejU4Z1cyRER6bGd1UWk3N1I1dEs1b3dndVhVMHNOdnhOTEtQN2QzVVZuSmRHYmJmR242aWZ3ekozWXVmL01kOUR0a1AzZGc5ZGRzQjVmY3B2d3hzM3prWDVaOHQreTVKcmlnUG12Mk41OS9aamFiYy9LTHN1ZVBQS2lPYlczRDVwMTBvNzRPM1pwMmUyb3ljdllIVEZVVmx5cStkaCtjTkhmaFdHVFFPWGJOZFRDREhJMi9UbWI3TnlwK2VVenVsQmFYS1gydDhuZWVpWHlxaks5Y3QxUU1ibEx2QnhhTXQvMXJNL1Zrb2pUOW9DV0FSWUJuZ1hNQWF3RXJBR1dsVTdnR2ZBemdUc0tFbmpmWEFGd0FxZ1BVd3Z3eDRGYUFFdUFMUURRZ1Q2Q25BV2tBUG9FUGtDYm9Jc0J6c1BzQkZnRjdBcFlBVkltL0F4WUR6QWVzQVp3RldnMzZoeUFkNE1mQlNVUWZZZllBdmdIMDU4T1ZDVDhSSjI3T3VMRm5EY1pWSjZlc3FWeGlaZ1EzeG9WdjF4OFphTkV2QnFkTU9yMUFwNFA4Y0NGU2VIU3JJYnowUlNoaGRJV3hnYjV2Ty9Ua2J5M0t4MDNhRDhGT0FpNmF1VlRuTDJhSm5HZHdKTFpWSnFJVGZEbHEwcENLMUo2N3grZlJUQU9QeUNlUGNkTXljUjZBbGl4TlYxY0taUzBqbUY3Z2FFOGNtTDNtOFltKzdUc3lUenNXdHpHdndNMU9zY3dWcFRGakdpNVBHL2dOYVhTcjNUZ2dBQUE9PSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["rate"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["rank"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"Alabama","2":"2.8244238","3":"23"},{"1":"Alaska","2":"2.6751860","3":"27"},{"1":"Arizona","2":"3.6295273","3":"10"},{"1":"Arkansas","2":"3.1893901","3":"17"},{"1":"California","2":"3.3741383","3":"14"},{"1":"Colorado","2":"1.2924531","3":"38"},{"1":"Connecticut","2":"2.7139722","3":"25"},{"1":"Delaware","2":"4.2319369","3":"6"},{"1":"District of Columbia","2":"16.4527532","3":"1"},{"1":"Florida","2":"3.3980688","3":"13"},{"1":"Georgia","2":"3.7903226","3":"9"},{"1":"Hawaii","2":"0.5145920","3":"49"},{"1":"Idaho","2":"0.7655102","3":"46"},{"1":"Illinois","2":"2.8369608","3":"22"},{"1":"Indiana","2":"2.1900730","3":"31"},{"1":"Iowa","2":"0.6893484","3":"47"},{"1":"Kansas","2":"2.2081106","3":"30"},{"1":"Kentucky","2":"2.6732010","3":"28"},{"1":"Louisiana","2":"7.7425810","3":"2"},{"1":"Maine","2":"0.8280881","3":"44"},{"1":"Maryland","2":"5.0748655","3":"4"},{"1":"Massachusetts","2":"1.8021791","3":"32"},{"1":"Michigan","2":"4.1786225","3":"7"},{"1":"Minnesota","2":"0.9992600","3":"40"},{"1":"Mississippi","2":"4.0440846","3":"8"},{"1":"Missouri","2":"5.3598917","3":"3"},{"1":"Montana","2":"1.2128379","3":"39"},{"1":"Nebraska","2":"1.7521372","3":"33"},{"1":"Nevada","2":"3.1104763","3":"19"},{"1":"New Hampshire","2":"0.3798036","3":"50"},{"1":"New Jersey","2":"2.7980319","3":"24"},{"1":"New Mexico","2":"3.2537239","3":"15"},{"1":"New York","2":"2.6679599","3":"29"},{"1":"North Carolina","2":"2.9993237","3":"20"},{"1":"North Dakota","2":"0.5947151","3":"48"},{"1":"Ohio","2":"2.6871225","3":"26"},{"1":"Oklahoma","2":"2.9589340","3":"21"},{"1":"Oregon","2":"0.9396843","3":"42"},{"1":"Pennsylvania","2":"3.5977513","3":"11"},{"1":"Rhode Island","2":"1.5200933","3":"35"},{"1":"South Carolina","2":"4.4753235","3":"5"},{"1":"South Dakota","2":"0.9825837","3":"41"},{"1":"Tennessee","2":"3.4509357","3":"12"},{"1":"Texas","2":"3.2013603","3":"16"},{"1":"Utah","2":"0.7959810","3":"45"},{"1":"Vermont","2":"0.3196211","3":"51"},{"1":"Virginia","2":"3.1246001","3":"18"},{"1":"Washington","2":"1.3829942","3":"37"},{"1":"West Virginia","2":"1.4571013","3":"36"},{"1":"Wisconsin","2":"1.7056487","3":"34"},{"1":"Wyoming","2":"0.8871131","3":"43"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[51]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Notice that select no longer has a data frame as the first argument. The first argument is assumed to be the result of the operation conducted right before the %&gt;%.</p>
@@ -1343,6 +1510,13 @@ select( my_states, state, rate, rank )</code></pre>
        rank = rank(-rate)) %&gt;%
   select(state, rate, rank)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NTEsIm5jb2wiOjMsInN1bW1hcnkiOnsiRGVzY3JpcHRpb24iOlsiZGYgWzUxIHggM10iXX19LCJyZGYiOiJINHNJQUFBQUFBQUFCbTFWZTJ3VVJSamZvN2YzYWd2WDBpWm8xSnhZU1NIMG9KWlhlZTJVdHRBRHJxMHR0bWdVbWJ2YjNnMTN0MU4yOW1qUEVJcEJneVRhdndpWUNDSWgvUU5yWTRUUWdob1NHd05GSVpxSWdWakRxL0tRb0pCSUZDMFc1M3JmN0pXTG03djg1dmZOek85N3pPNThUVFhySzF6clhaSWs1VWhXaTBYS2tmbFFrcXNiSytkVlNwSjFFaWNXeVNvNVU5akpGMDBkWHlsSmJ2NnZnQWw3VlF3SGNCd0R0WEhLb3RpYzFNa2JWQlBVVWFWSHNjWXdBKzZxeGpIU1JuV05tQ3VxYVl6cU9FU0I1MVpUVFZPREJna21ETEdrUm8zaERxeXJ3SXRxQ0ROMEVqUTh0TTNEdHlmaUFWUE92cEtya1pCSlY2bFVENXV6dGpxdVF3Z3cyUmZDRWVIWDRZdkZpRWFKaU5UdTAwSUVtNGxZZmJURFZGa3pNU1hIR2xVekVzRm9Fcmh6TFUwUU5tR3I3TWRFRTdFNy9GaFB4ckFXQXA3dng0emhZQ1RCVk1Nd0pmMGtHQ0ZockFsSlArRTFZZFFRa3JsK3dsanExOTVPTW5zWW93bGRjTHVmYWtZbUNFZTlHdEFubkpPdFh0MkN6VExsMTZzZG5qb2NiMmNSWXBiWmxUS3VWbldtSmlkYS9Hb25DZEtNYklmblphcEhnVSt1cDdvUjhWUmpuZkpxQ3ZtOHRMVUdSek1wV0JzaXhGUnBpTWI0U1dSZXFRWmREVk9SZlY2anFta3NHZHVDTTI5TlhsT0VobFNQajAwbzVlUm1tdmdmMzJuclk3NmQ2OVJVUFprcVVwWFhxWjNtZ1ZwZk1uQkVWTEZGMWVPOGtDTFFGc0xmcGt3WXJsYk1LNmFGRFRQWS9GYVZHWjZzWmM1V3dvSlVZMFNzc3JjbWFaenZTMFdkK3JLUTdmM290dUtEWjVIY2R2cjZ2bTlxVUw2emRtOVA3V0hrM0hIcC9rOWRwY2cxdHJReVBuTkl1ZDgzMHZES1FDZVMreGNXdnJidktuTC90bjE0RUwySDVyS2JCeS9ldm85eTV5dy9ObnJzT0pyY3RMdG41dXBtNVVySHJnTzdsbTVWYm5WTldkSTNjaExaamt6YlBqaDFFYks4WFd0TkhuQXBONmFVa011MXJ5TEx4L012VjVYZVFYSmd3QnYrY0NkNjVrRzQ5TUFKdTNLNzY4aEE4WlZlVkxUMjhMc3ZQdis2OHZESEU1K2YzN29idWZ0dm5SczgvcGx5OSs5N0JjTmZYMEx1c3BJM3AyL2Nob3JiZDI3K25sMVQvZ2dQSFQzWGRVRjU2UGdxWjJQeVBISmNxNHIrc0Rla1hLdy91ci91NTArUUxiQ2hPNWFEa012KzBhYXlXWGVSM0RvYTJPTjRHdG5IOW05cUs3dW1qTmh2amp3eE1JYmtyc1ZQL3VNK2creTkxL2NVN2ppay9GN3d5K0RPN3Rrb2I2ajh1eVM1ckR4bzh0ZWZmV2NQS3JqeFJmbHovYzhxZHpjMzQ0cFB0NkxjRDk2YWNhcXdDVG4zQlU3Tkt5bFhmdTNzbXpOODZGdmx2TkY3MVhZaGdSeVB2QTJuZXpZcmYzcE9ka3NMNWlwL05mbzZ6MFMvVkVaWHR5elRBeHVVTzhIRm84My9Xc3p6V1NpTlAyZ0pZQWxnT2VCc3dHckFTc0JwYVZUdUFaOEZPQjJ3Ym5zYVZ3RmZBS2dBcm9MNTVjQ1hBa3FBS3dIZGdEQ0JuZ0tzQWZRQU9rU2NvSXNBSzhEdUExd0U2QVZjQmpoUHhBMjRHSEErWUMzZ0RNQXEwQzhTOFFBdkJUNVg1QUYySCtBTFlGOEJmSVhRRTM3UzlxeVdKV3M0cmpJcDNhNXloSkVaMkJBZnVsVi9iS3hGc3hTY091M3dDcFY4L3A4RWppcXlYUVY1MXhPdWhORVZ3Z2IydHVsOFAyZGpXVnZzdE4wZy9CYmdvcW0yS21kdHR1aFpCbmRDUzBVU0t1UGRRWXVXcFJxMDVCcWZUei81TUs2WU1NNUorNXowQ0xSa2NhT3FXampUaEdUZXdOV1l1RFo1eXVNWmU5dDFZdDUwTG01bFhvUGZtV0tkSzBoandqS2VuRFQySDNoL2RKUk9DQUFBIn0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["rate"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["rank"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"Alabama","2":"2.8244238","3":"23"},{"1":"Alaska","2":"2.6751860","3":"27"},{"1":"Arizona","2":"3.6295273","3":"10"},{"1":"Arkansas","2":"3.1893901","3":"17"},{"1":"California","2":"3.3741383","3":"14"},{"1":"Colorado","2":"1.2924531","3":"38"},{"1":"Connecticut","2":"2.7139722","3":"25"},{"1":"Delaware","2":"4.2319369","3":"6"},{"1":"District of Columbia","2":"16.4527532","3":"1"},{"1":"Florida","2":"3.3980688","3":"13"},{"1":"Georgia","2":"3.7903226","3":"9"},{"1":"Hawaii","2":"0.5145920","3":"49"},{"1":"Idaho","2":"0.7655102","3":"46"},{"1":"Illinois","2":"2.8369608","3":"22"},{"1":"Indiana","2":"2.1900730","3":"31"},{"1":"Iowa","2":"0.6893484","3":"47"},{"1":"Kansas","2":"2.2081106","3":"30"},{"1":"Kentucky","2":"2.6732010","3":"28"},{"1":"Louisiana","2":"7.7425810","3":"2"},{"1":"Maine","2":"0.8280881","3":"44"},{"1":"Maryland","2":"5.0748655","3":"4"},{"1":"Massachusetts","2":"1.8021791","3":"32"},{"1":"Michigan","2":"4.1786225","3":"7"},{"1":"Minnesota","2":"0.9992600","3":"40"},{"1":"Mississippi","2":"4.0440846","3":"8"},{"1":"Missouri","2":"5.3598917","3":"3"},{"1":"Montana","2":"1.2128379","3":"39"},{"1":"Nebraska","2":"1.7521372","3":"33"},{"1":"Nevada","2":"3.1104763","3":"19"},{"1":"New Hampshire","2":"0.3798036","3":"50"},{"1":"New Jersey","2":"2.7980319","3":"24"},{"1":"New Mexico","2":"3.2537239","3":"15"},{"1":"New York","2":"2.6679599","3":"29"},{"1":"North Carolina","2":"2.9993237","3":"20"},{"1":"North Dakota","2":"0.5947151","3":"48"},{"1":"Ohio","2":"2.6871225","3":"26"},{"1":"Oklahoma","2":"2.9589340","3":"21"},{"1":"Oregon","2":"0.9396843","3":"42"},{"1":"Pennsylvania","2":"3.5977513","3":"11"},{"1":"Rhode Island","2":"1.5200933","3":"35"},{"1":"South Carolina","2":"4.4753235","3":"5"},{"1":"South Dakota","2":"0.9825837","3":"41"},{"1":"Tennessee","2":"3.4509357","3":"12"},{"1":"Texas","2":"3.2013603","3":"16"},{"1":"Utah","2":"0.7959810","3":"45"},{"1":"Vermont","2":"0.3196211","3":"51"},{"1":"Virginia","2":"3.1246001","3":"18"},{"1":"Washington","2":"1.3829942","3":"37"},{"1":"West Virginia","2":"1.4571013","3":"36"},{"1":"Wisconsin","2":"1.7056487","3":"34"},{"1":"Wyoming","2":"0.8871131","3":"43"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[51]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ol start="2" style="list-style-type: decimal">
@@ -1363,6 +1537,13 @@ select( my_states, state, rate, rank )</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXlfc3RhdGVzXG5gYGAifQ== -->
 <pre class="r"><code>my_states</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6OCwibmNvbCI6Mywic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbOCB4IDNdIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQmd0eWlURG1pdUJpWUdCZ1ptQmhaR1JnWmdVeUdWaWRBeXhOTEJrWVdKaUFIRVlHRmdaT0VGMEJWQ1FNVnNuQUlBREVIRkFKTm8vRThzVE1UQ2lQMVRNbE1TTWZ4dkZOek14TGhYSjQvVkxMRlR3U2N3dUtNektMWUlKcy9rV3A2Zmw1VUI1TGFFbGlCcFROSHBaYWxKdWZWd0xqaGxmbTUyYm1wUU9aZkNETDdSK1VkODd2dEtteGYxSFBiNzMyOFQ3N1YvV2J0b3MrV0cxL3cyL3pYSTg3YSt6ZkNUNDUxTjZuWS8reVlxMys3Y1duN2ErVXJIN0lkcjNVL2syeTFlL2d2NHd3Y3h3OEdrQmVabkJ3WjREUWJsRGFFMHE3d3NTaDZqeWh0Q3VFUmdzbDFyekUzTlJpYUFneHd3U0xTeEpMWUQ1bUtVSmg1MldqbWNCWmxGK3VCek9GRjRpWm9CWnhvRnVWbkpOWURMTUtKc2lWa2xpU3FKZFdCTlFQNVAxRDA4S2VYMUNTbVo4SDFNUUVpa2xXTk0yTVJXZ0NBcVY1SUplazZDWm5sT1psNjVvYWdtd0F5ME1BTDVUTmdjUm1odGpKOUI5cUZpc3NwbFB6MGhHSmdUVW5NU2sxQjhyaEEzb1o3R085Z3FKTWVJeHpBVVdMOVVyeVN4Smg2cmlTODNOZ0ltRFBNZndEQUJtM0t4akJBZ0FBIn0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["rate"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["rank"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"Hawaii","2":"0.5145920","3":"49"},{"1":"Idaho","2":"0.7655102","3":"46"},{"1":"Maine","2":"0.8280881","3":"44"},{"1":"New Hampshire","2":"0.3798036","3":"50"},{"1":"Oregon","2":"0.9396843","3":"42"},{"1":"Utah","2":"0.7959810","3":"45"},{"1":"Vermont","2":"0.3196211","3":"51"},{"1":"Wyoming","2":"0.8871131","3":"43"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[8]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 </div>
 
