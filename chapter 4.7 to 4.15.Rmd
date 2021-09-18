@@ -298,7 +298,6 @@ NHANES %>%
 ```
 
 
-
 4. Compute the average and standard deviation for females, but for each age group separately rather than a selected decade as in question 1. Note that the age groups are defined by AgeDecade. Hint: rather than filtering by age and gender, filter by Gender and then use group_by.
 
 ```{r}
