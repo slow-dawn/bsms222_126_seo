@@ -272,17 +272,21 @@ d1 <- d %>% group_by(SeizureType) %>% count() %>% mutate(proportion1 = n / sum(d
 pander(d1) 
 ```
 
+
 ```{r}
 d2 <- d %>% group_by(Classification) %>% count() %>% mutate(proportion2 = n / sum(d2$n))
 
 pander(d2)
 ```
 
+
 Then, you might be intrigued to whether females and males have different occurrence in each disorder. Let's check it. 
 
 ```{r}
 pander(d %>% group_by(PatientSex, ASD) %>% count())
 ```
+
+
 
 Another question you can ask is whether different mutation consequences occur in each phenotype. Let's find out how many mutation consequences are observed in each phenotype. 
 
@@ -294,6 +298,8 @@ pander(d %>% group_by(Classification, ASD) %>% count())
 ## 3.4 Find the position where different consequences of mutation occur
 
 If you checked the recurrent mutations, you might want to find a locus where two or more variants occur. Such loci might indicate functionally important position of the gene and you might find some insight as to a cause of disease.
+
+
 
 ```{r}
 pander(d %>% group_by(TrueRecurrence, Pos_hg19) %>% count())
