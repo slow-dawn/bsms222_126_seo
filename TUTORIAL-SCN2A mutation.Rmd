@@ -245,28 +245,28 @@ To assess the recurrent mutations, the first thing we can try is to examine whet
 ```{r}
 c <- as.data.frame(table(d$p.Protein))
 ```
+
 or we can check the number of unique variants in the dataset by:
+
 ```{r}
-# please write your code
 d %>% filter('UniqueSample/Family' == 'Y') %>% count()
 ```
 How many unique variants you can find? and which variants are occurred in multiple times?
 
 Then, you can use other columns to check frequency for different groups. Which columns you would use for more grouping?
 If you find that, please check the recurrent mutations for each group.
-```{r}
-# please write your code
 
+```{r}
 d %>% group_by(TrueRecurrence, Inheritence) %>% count()
 ```
 
 
 
 ## 3.3 What is the proportion of diagnosis for SCN2A patient?
-SCN2A mutation can have multiple different consequences for disease phenotypes. It can cause ASD but also other neurodevelopmental conditions. In total cases, how many phenotypes occur in SCN2A patients. Then, calculate the proportion of the phenotypes among total cases. 
-```{r}
-# please write your code
 
+SCN2A mutation can have multiple different consequences for disease phenotypes. It can cause ASD but also other neurodevelopmental conditions. In total cases, how many phenotypes occur in SCN2A patients. Then, calculate the proportion of the phenotypes among total cases. 
+
+```{r}
 d1 <- d %>% group_by(SeizureType) %>% count() %>% mutate(proportion1 = n / sum(d1$n))
 
 d1 
@@ -279,23 +279,23 @@ d2
 ```
 
 Then, you might be intrigued to whether females and males have different occurrence in each disorder. Let's check it. 
+
 ```{r}
-# please write your code
 d %>% group_by(PatientSex, ASD) %>% count()
 ```
 
 Another question you can ask is whether different mutation consequences occur in each phenotype. Let's find out how many mutation consequences are observed in each phenotype. 
+
 ```{r}
-# please write your code
 d %>% group_by(Classification, ASD) %>% count()
 ```
 
 
 ## 3.4 Find the position where different consequences of mutation occur
+
 If you checked the recurrent mutations, you might want to find a locus where two or more variants occur. Such loci might indicate functionally important position of the gene and you might find some insight as to a cause of disease.
 
 ```{r}
-# please write your code
 d %>% group_by(TrueRecurrence, Pos_hg19) %>% count()
 ```
 
