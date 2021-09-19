@@ -20,6 +20,7 @@ What we will do with this dataset,
 
 ```{r}
 library(tidyverse)
+library(pander)
 ```
 
 
@@ -62,6 +63,7 @@ head(d$PatientID)
 ```
 
 Cool. Now you can see the TrueRecurrence column. What is the class of the column TrueRecurrence?
+
 ```{r}
 class(d$TrueRecurrence)
 ```
@@ -251,6 +253,7 @@ or we can check the number of unique variants in the dataset by:
 ```{r}
 pander(d %>% filter('UniqueSample/Family' == 'Y') %>% count())
 ```
+
 How many unique variants you can find? and which variants are occurred in multiple times?
 
 Then, you can use other columns to check frequency for different groups. Which columns you would use for more grouping?
