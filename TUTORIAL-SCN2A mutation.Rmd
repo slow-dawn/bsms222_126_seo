@@ -50,7 +50,7 @@ It shows that the d object is data.frame.
 Then, let's overview the data frame. We will use head function to print out first few lines.
 
 ```{r}
-head(d)
+pander(head(d))
 ```
 
 When you execute code in a notebook chunk, an output will be visible immediately beneath the input. From this, you can see several rows and columns in the data frame. 
@@ -249,7 +249,7 @@ c <- as.data.frame(table(d$p.Protein))
 or we can check the number of unique variants in the dataset by:
 
 ```{r}
-d %>% filter('UniqueSample/Family' == 'Y') %>% count()
+pander(d %>% filter('UniqueSample/Family' == 'Y') %>% count())
 ```
 How many unique variants you can find? and which variants are occurred in multiple times?
 
@@ -257,7 +257,7 @@ Then, you can use other columns to check frequency for different groups. Which c
 If you find that, please check the recurrent mutations for each group.
 
 ```{r}
-d %>% group_by(TrueRecurrence, Inheritence) %>% count()
+pander(d %>% group_by(TrueRecurrence, Inheritence) %>% count())
 ```
 
 
@@ -269,25 +269,25 @@ SCN2A mutation can have multiple different consequences for disease phenotypes. 
 ```{r}
 d1 <- d %>% group_by(SeizureType) %>% count() %>% mutate(proportion1 = n / sum(d1$n))
 
-d1 
+pander(d1) 
 ```
 
 ```{r}
 d2 <- d %>% group_by(Classification) %>% count() %>% mutate(proportion2 = n / sum(d2$n))
 
-d2
+pander(d2)
 ```
 
 Then, you might be intrigued to whether females and males have different occurrence in each disorder. Let's check it. 
 
 ```{r}
-d %>% group_by(PatientSex, ASD) %>% count()
+pander(d %>% group_by(PatientSex, ASD) %>% count())
 ```
 
 Another question you can ask is whether different mutation consequences occur in each phenotype. Let's find out how many mutation consequences are observed in each phenotype. 
 
 ```{r}
-d %>% group_by(Classification, ASD) %>% count()
+pander(d %>% group_by(Classification, ASD) %>% count())
 ```
 
 
@@ -296,7 +296,7 @@ d %>% group_by(Classification, ASD) %>% count()
 If you checked the recurrent mutations, you might want to find a locus where two or more variants occur. Such loci might indicate functionally important position of the gene and you might find some insight as to a cause of disease.
 
 ```{r}
-d %>% group_by(TrueRecurrence, Pos_hg19) %>% count()
+pander(d %>% group_by(TrueRecurrence, Pos_hg19) %>% count())
 ```
 
 ## 3.5 Sketch a plot to visualize your analysis
