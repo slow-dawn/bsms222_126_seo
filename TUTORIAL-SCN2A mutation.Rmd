@@ -257,7 +257,7 @@ If you find that, please check the recurrent mutations for each group.
 ```{r}
 # please write your code
 
-d %>% group_by(TrueRecurrence, Inheritence) %>% select(TrueRecurrence) %>% count()
+d %>% group_by(TrueRecurrence, Inheritence) %>% count()
 ```
 
 
