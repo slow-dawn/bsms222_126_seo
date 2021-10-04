@@ -522,6 +522,7 @@ As a final point, we note that these distributions weigh every country the same.
 
 This particular figure shows very clearly how the income distribution gap is closing with most of the poor remaining in Sub-Saharan Africa.
 
+
 # 9.8 The ecological fallacy and importance of showing the data
 Throughout this section, we have been comparing regions of the world. We have seen that, on average, some regions do better than others. In this section, we focus on describing the importance of variability within the groups when examining the relationship between a country’s infant mortality rates and average income.
 
@@ -530,6 +531,7 @@ The relationship between these two variables is almost perfectly linear and the 
 
 Note that the plot uses a new transformation, the logistic transformation.
 
+
 ## 9.8.1 Logistic transformation
 The logistic or logit transformation for a proportion or rate  
 p is defined as:
@@ -537,6 +539,8 @@ p is defined as:
 When  p is a proportion or probability, the quantity that is being logged, p/(1−p), is called the odds. In this case p is the proportion of infants that survived. The odds tell us how many more infants are expected to survive than to die. The log transformation makes this symmetric. If the rates are the same, then the log odds is 0. Fold increases or decreases turn into positive and negative increments, respectively.
 
 This scale is useful when we want to highlight differences near 0 or 1. For survival rates this is important because a survival rate of 90% is unacceptable, while a survival of 99% is relatively good. We would much prefer a survival rate closer to 99.9%. We want our scale to highlight these difference and the logit does this. Note that 99.9/0.1 is about 10 times bigger than 99/1 which is about 10 times larger than 90/10. By using the log, these fold changes turn into constant increases.
+
+
 
 ## 9.8.2 Show the data
 Now, back to our plot. Based on the plot above, do we conclude that a country with a low income is destined to have low survival rate? Do we conclude that survival rates in Sub-Saharan Africa are all lower than in Southern Asia, which in turn are lower than in the Pacific Islands, and so on?
