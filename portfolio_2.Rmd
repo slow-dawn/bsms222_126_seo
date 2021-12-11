@@ -1,0 +1,103 @@
+---
+title: "Correlation between Primary Tumor Location and Age in nonsmokers"
+output: html_notebook
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+BSMS222 
+Jihyun Seo(2015250126)
+
+
+
+
+## 1. Introduction
+
+
+In resource paper 'Proteogenomics of Non-smoking Lung Cancer in East Asia Delineates Molecular Signature of Pathogenesis and Progression', focusing on clinical data from Taiwan(TW) cohort, what I was wondering is about primary tumor location in treatment-naive patients from TW, especially whose histology type is ADC(adenocacinoma) and who are nonsmokers. Which factor among paients' characters such as age, gender, ADC stage or EGFR_status would have correlation to tumor location?
+
+
+Description of tumor location in lung. 
+RUL = Right Upper Lobe, RML = Right Middle Lobe, RLL = Right Lower Lobe
+LUL = Left Upper Lobe, LLL = Left Lower Lobe
+
+
+
+
+## 2. Dataset $ Visualizing
+
+```{r}
+library(dplyr)
+library(ggplot2)
+library(readxl)
+library(tidyverse)
+library(cowplot)
+```
+
+
+
+```{r}
+d1 <- read_excel("mmc1.xlsx", sheet = "Table S1A_clinical_103patient")
+head(d1)
+```
+
+
+First of all, select data of only nonsmokers and ADC patients from the clinical data source given from paper.
+And select 4 factors(Gender, Age, Stge, EGFR_Status) to focus on them. 
+
+
+```{r}
+d2 <- d1 %>% 
+  filter(`Smoking Status` == 'Nonsmoke', `Histology Type` == "ADC") %>%
+  select('Gender', 'Age', 'Stage', 'EGFR_Status', 'Primary Tumor Location')
+d2
+```
+
+
+
+Let's make plot for four points of view 1) gender and tumor location 2) stage and tumor location 3) EGFR_Status and tumor location 4) age and tumor location.
+
+
+```{r}
+p1 <- d2 %>% ggplot(aes(`Primary Tumor Location`, Gender)) + 
+  geom_boxplot()
+p2 <- d2 %>% ggplot(aes(`Primary Tumor Location`, Stage)) + 
+  geom_boxplot() 
+p3 <- d2 %>% ggplot(aes(`Primary Tumor Location`, EGFR_Status)) + 
+  geom_boxplot() 
+p4 <- d2 %>% ggplot(aes(`Primary Tumor Location`, Age)) + 
+  geom_boxplot()
+
+plot_grid(p1, p2, p3, p4)
+```
+
+
+
+Among these, 4)age and tumor location had meaningful correlation.
+
+
+```{r}
+d2 %>% ggplot(aes(`Primary Tumor Location`, Age)) + 
+  geom_boxplot() + 
+  geom_point(alpha=0.3, size = 1.4, color='navy')
+```
+
+
+
+## 3. Discussion
+
+According to the figure, in "left" lung lobes, median of LUL was higher in age than one of LLL. 
+Likewise in "right" lung lobes, median of RUL was the highest, followed by RML and then RUL. 
+In terms of median, left and right lungs both look right-top direction.
+And it leads to positive correlation between age and location of ADC(upper-middle-lower). 
+
+
+
+
+## 4. Reference
+
+Yi-JuChen, Theodoros I.Roumeliotis, Ya-Hsuan Chang, Ching-Tai Chen, Chia-Li Han, Miao-Hsia Lin, Huei-Wen Chen , Gee-Chen Chang, Yih-Leong Chang, Chen-Tu Wu, Mong-Wei Lin, Min-Shu Hsieh, Yu-Tai Wang, Yet-Ran Chen, Inge Jonassen, Fatemeh Zamanzad Ghavidel, Ze-Shiang Lin, Kuen-Tyng Lin1 …Yu-Ju Chen, Proteogenomics of Non-smoking Lung Cancer in East Asia Delineates Molecular Signatures of Pathogenesis and Progression, Cell, Volume 182, Issue 1, 9 July 2020, Pages 226-244.e17
